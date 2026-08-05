@@ -10,9 +10,7 @@ type AppInfo = {
 };
 
 type ViewState =
-  | { status: "loading" }
-  | { status: "ready"; data: AppInfo }
-  | { status: "error"; message: string };
+  { status: "loading" } | { status: "ready"; data: AppInfo } | { status: "error"; message: string };
 
 function readableError(error: unknown): string {
   if (error instanceof Error) return error.message;
@@ -58,10 +56,22 @@ function App() {
 
         {state.status === "ready" && (
           <dl className="info-grid">
-            <div><dt>Application</dt><dd>{state.data.appName}</dd></div>
-            <div><dt>Version</dt><dd>{state.data.version}</dd></div>
-            <div><dt>Core status</dt><dd>{state.data.coreStatus}</dd></div>
-            <div><dt>Operating mode</dt><dd>{state.data.operatingMode}</dd></div>
+            <div>
+              <dt>Application</dt>
+              <dd>{state.data.appName}</dd>
+            </div>
+            <div>
+              <dt>Version</dt>
+              <dd>{state.data.version}</dd>
+            </div>
+            <div>
+              <dt>Core status</dt>
+              <dd>{state.data.coreStatus}</dd>
+            </div>
+            <div>
+              <dt>Operating mode</dt>
+              <dd>{state.data.operatingMode}</dd>
+            </div>
           </dl>
         )}
       </section>

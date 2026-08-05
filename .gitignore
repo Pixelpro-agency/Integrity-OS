@@ -28,3 +28,6 @@ src-tauri/target/
 .env
 .env.*
 !.env.example
+
+# TypeScript build information
+*.tsbuildinfo
