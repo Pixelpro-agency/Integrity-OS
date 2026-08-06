@@ -1,0 +1,2987 @@
+{
+  "report_id": "RPT-DOC-AUDIT-PLAN-0004",
+  "title": "Project Integrity OS — Piano TODO di correzione documentale dopo audit di secondo livello — v0.4",
+  "created_at": "2026-08-06T17:04:00+02:00",
+  "language": "it-IT",
+  "repository": "Pixelpro-agency/Integrity-OS",
+  "local_branch": "review/documentation-audit-20260806",
+  "base_commit": "382c96f1f93de4ef6003f92db209675ab36d3c3c",
+  "git_state": "UNCOMMITTED",
+  "overall_status": "BLOCKED_NOT_COMMITTABLE",
+  "source_audit": {
+    "path": "Project_Integrity_OS_Audit_Secondo_Livello_108_Markdown_v0_1.md",
+    "markdown_examined": 108,
+    "pass": 76,
+    "review": 18,
+    "fail": 14
+  },
+  "id_conventions": {
+    "FND": "finding globale",
+    "PHASE": "fase del piano",
+    "ACT": "azione TODO",
+    "Q": "decisione/domanda umana",
+    "FILE": "file Markdown controllato individualmente"
+  },
+  "findings": [
+    {
+      "id": "FND-001",
+      "title": "Artefatti non Markdown eliminati dal tree docs",
+      "severity": "BLOCKER",
+      "description": "Il pacchetto è stato costruito da un archivio contenente solo file Markdown e poi ha sostituito l'intera cartella docs. Questo elimina almeno lo script docs/10-executions/TODO-0002/instructions/closure/Project_Integrity_OS_Chiusura_TODO-0002_v0_1_EXECUTED.py.",
+      "affected_action_ids": [
+        "ACT-003",
+        "ACT-004"
+      ]
+    },
+    {
+      "id": "FND-002",
+      "title": "Document Registry v0.7 non affidabile",
+      "severity": "BLOCKER",
+      "description": "Il registro cambia identificatori DOC storici, omette documenti, usa 51 valori di stato non controllati e compila solo in minima parte la catena Sostituisce.",
+      "affected_action_ids": [
+        "ACT-005",
+        "ACT-006",
+        "ACT-007",
+        "ACT-008"
+      ]
+    },
+    {
+      "id": "FND-003",
+      "title": "Struttura reale delle task diversa dalla baseline organizzativa",
+      "severity": "HIGH",
+      "description": "Mancano README per TODO-0002 e TODO-0003; il materiale superseded di TODO-0101 è collocato sotto instructions; manca una politica applicata uniformemente che mantenga il tree essenziale e rinvii la storia a Git.",
+      "affected_action_ids": [
+        "ACT-010",
+        "ACT-011",
+        "ACT-012"
+      ]
+    },
+    {
+      "id": "FND-004",
+      "title": "Metadati interni incoerenti con filename e ruolo",
+      "severity": "HIGH",
+      "description": "Più file dichiarano FINAL, EXECUTED o SUPERSEDED nel nome ma non nel contenuto; un brief SUPERSEDED dichiara internamente CORRENTE; il report TODO-0003 non ha identità documentale completa.",
+      "affected_action_ids": [
+        "ACT-013",
+        "ACT-014",
+        "ACT-015",
+        "ACT-016",
+        "ACT-017",
+        "ACT-018",
+        "ACT-019",
+        "ACT-020"
+      ]
+    },
+    {
+      "id": "FND-005",
+      "title": "Audit Documentale v0.1 invalidato dai finding successivi",
+      "severity": "BLOCKER",
+      "description": "L'audit v0.1 si dichiara FINAL ma non rileva la cancellazione del file Python, i difetti del Registry, le contraddizioni di stato e le divergenze strutturali.",
+      "affected_action_ids": [
+        "ACT-027"
+      ]
+    },
+    {
+      "id": "FND-006",
+      "title": "Decisioni di governance risolte, applicazione ancora necessaria",
+      "severity": "RESOLVED_PENDING_IMPLEMENTATION",
+      "description": "Q-001-D, Q-002-C, Q-003-C e Q-004-C sono state approvate. Non restano domande di governance aperte; ACT-023, ACT-024, ACT-025 e ACT-026 devono ancora applicare integralmente le decisioni al tree documentale.",
+      "affected_action_ids": [
+        "ACT-023",
+        "ACT-024",
+        "ACT-025",
+        "ACT-026"
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "id": "PHASE-00",
+      "title": "Congelamento e protezione",
+      "action_ids": [
+        "ACT-001",
+        "ACT-002"
+      ]
+    },
+    {
+      "id": "PHASE-01",
+      "title": "Reintegro completo del tree docs",
+      "action_ids": [
+        "ACT-003",
+        "ACT-004"
+      ]
+    },
+    {
+      "id": "PHASE-02",
+      "title": "Ricostruzione del Document Registry",
+      "action_ids": [
+        "ACT-005",
+        "ACT-006",
+        "ACT-007",
+        "ACT-008"
+      ]
+    },
+    {
+      "id": "PHASE-03",
+      "title": "Correzione della governance corrente, archivio storico Git e nuova baseline documentale globale",
+      "action_ids": [
+        "ACT-009",
+        "ACT-010",
+        "ACT-011",
+        "ACT-023",
+        "ACT-024",
+        "ACT-012"
+      ]
+    },
+    {
+      "id": "PHASE-04",
+      "title": "Correzione dei documenti storici e delle identità",
+      "action_ids": [
+        "ACT-013",
+        "ACT-014",
+        "ACT-015",
+        "ACT-016",
+        "ACT-017",
+        "ACT-018",
+        "ACT-019",
+        "ACT-020",
+        "ACT-021",
+        "ACT-022"
+      ]
+    },
+    {
+      "id": "PHASE-05",
+      "title": "Applicazione delle decisioni Q-003-C e Q-004-C",
+      "action_ids": [
+        "ACT-025",
+        "ACT-026"
+      ]
+    },
+    {
+      "id": "PHASE-06",
+      "title": "Nuovo audit e gate di commit",
+      "action_ids": [
+        "ACT-027",
+        "ACT-028",
+        "ACT-029"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "ACT-001",
+      "phase": "PHASE-00",
+      "title": "Bloccare commit e push",
+      "status": "TODO",
+      "operation": "FREEZE",
+      "remove": [],
+      "add": [],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Non creare commit sul branch review/documentation-audit-20260806.",
+        "Non eseguire push.",
+        "Non integrare il branch in main finché ACT-029 non è PASS."
+      ],
+      "depends_on": [],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "HEAD resta 382c96f1f93de4ef6003f92db209675ab36d3c3c.",
+        "Nessun nuovo commit locale o remoto."
+      ],
+      "implements_decisions": []
+    },
+    {
+      "id": "ACT-002",
+      "phase": "PHASE-00",
+      "title": "Conservare backup e quarantena esistenti",
+      "status": "TODO",
+      "operation": "PRESERVE",
+      "remove": [],
+      "add": [],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Non cancellare /c/Users/Utente/Desktop/Project_Integrity_OS_document_backups/docs_before_documentation_audit_382c96f.tar.gz.",
+        "Non cancellare /c/Users/Utente/Desktop/Project_Integrity_OS_quarantine/outside_docs_20260806_152544.",
+        "Registrare SHA-256 del backup prima di una nuova applicazione."
+      ],
+      "depends_on": [
+        "ACT-001"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Backup e quarantena esistono e sono leggibili."
+      ],
+      "implements_decisions": []
+    },
+    {
+      "id": "ACT-003",
+      "phase": "PHASE-01",
+      "title": "Reintegrare lo script di chiusura TODO-0002",
+      "status": "TODO",
+      "operation": "REINTEGRATE",
+      "remove": [],
+      "add": [],
+      "replace": [],
+      "reintegrate": [
+        {
+          "source": "382c96f1f93de4ef6003f92db209675ab36d3c3c:docs/10-executions/TODO-0002/instructions/closure/Project_Integrity_OS_Chiusura_TODO-0002_v0_1_EXECUTED.py",
+          "destination": "docs/10-executions/TODO-0002/instructions/closure/Project_Integrity_OS_Chiusura_TODO-0002_v0_1_EXECUTED.py"
+        }
+      ],
+      "exact_instructions": [
+        "Recuperare il file esatto dal commit base, senza riscriverlo.",
+        "Verificare che il blob reintegrato sia byte-identico alla versione di main.",
+        "Registrarlo nel nuovo Document Registry con l'ID storico DOC-027."
+      ],
+      "depends_on": [
+        "ACT-002"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Il file Python è presente nel tree.",
+        "SHA del file coincide con la versione del commit base.",
+        "DOC-027 è presente nel Registry."
+      ],
+      "implements_decisions": []
+    },
+    {
+      "id": "ACT-004",
+      "phase": "PHASE-01",
+      "title": "Inventariare e reintegrare tutti i file non Markdown sotto docs",
+      "status": "TODO",
+      "operation": "REINTEGRATE",
+      "remove": [],
+      "add": [
+        "Un inventario completo di tutti i file docs non terminanti in .md nel commit base."
+      ],
+      "replace": [],
+      "reintegrate": [
+        {
+          "source": "382c96f1f93de4ef6003f92db209675ab36d3c3c:docs/** (file non Markdown)",
+          "destination": "stesso percorso relativo nel branch di revisione"
+        }
+      ],
+      "exact_instructions": [
+        "Confrontare `git ls-tree -r --name-only 382c96f docs` con il tree corrente.",
+        "Filtrare tutti i percorsi che non terminano in `.md`.",
+        "Reintegrare ogni file mancante nello stesso percorso.",
+        "Non sostituire file non Markdown presenti e diversi senza un finding separato."
+      ],
+      "depends_on": [
+        "ACT-003"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Nessun file non Markdown presente nel commit base manca nel tree corretto.",
+        "Il confronto completo di docs non segnala cancellazioni non autorizzate."
+      ],
+      "implements_decisions": []
+    },
+    {
+      "id": "ACT-005",
+      "phase": "PHASE-02",
+      "title": "Rimuovere il Registry v0.7 dalla posizione corrente",
+      "status": "TODO",
+      "operation": "MOVE_AND_INVALIDATE",
+      "remove": [
+        "docs/00-current/Project_Integrity_OS_Document_Registry_v0_7.md"
+      ],
+      "add": [
+        "docs/20-history/registry/Project_Integrity_OS_Document_Registry_v0_7_INVALIDATED.md"
+      ],
+      "replace": [
+        {
+          "source": "Project_Integrity_OS_Document_Registry_v0_7.md",
+          "destination": "Project_Integrity_OS_Document_Registry_v0_7_INVALIDATED.md",
+          "change": "Aggiungere intestazione INVALIDATED senza alterare il corpo storico oltre alla nota di invalidazione."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Togliere v0.7 da docs/00-current.",
+        "Conservarla nello storico come versione invalidata.",
+        "Dichiarare che non deve essere usata come fonte autorevole."
+      ],
+      "depends_on": [
+        "ACT-004"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Nessun Registry v0.7 resta in 00-current."
+      ],
+      "implements_decisions": []
+    },
+    {
+      "id": "ACT-006",
+      "phase": "PHASE-02",
+      "title": "Creare Document Registry v0.8 con ID stabili",
+      "status": "TODO",
+      "operation": "ADD",
+      "remove": [],
+      "add": [
+        "docs/00-current/Project_Integrity_OS_Document_Registry_v0_8.md"
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Mantenere gli ID DOC-001...DOC-048 già assegnati ai documenti originari.",
+        "Non assegnare un nuovo DOC-ID a un file solo perché è stato rinominato o spostato.",
+        "Aggiungere nuovi ID solo ai documenti realmente nuovi dopo DOC-048.",
+        "Registrare anche file non Markdown autorevoli, incluso DOC-027.",
+        "Registrare nel tree corrente solo documenti e artefatti ancora necessari.",
+        "Per i documenti superati rimossi dal tree, rinviare all'History Index con percorso storico e commit SHA completo.",
+        "Registrare la v0.1 Prompt/Report/Rule Catalog come documento storico legato a TODO-0003.",
+        "Registrare la nuova v0.2 Prompt/Report/Rule Catalog come baseline globale corrente e non retroattiva.",
+        "Usare percorsi reali, non percorsi previsti."
+      ],
+      "depends_on": [
+        "ACT-005"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Tutti i documenti e artefatti governati sono registrati una sola volta.",
+        "Gli ID storici restano invariati.",
+        "DOC-027 e DOC-028 sono presenti.",
+        "La v0.1 e la v0.2 Prompt/Report/Rule Catalog hanno portata e stato distinti."
+      ],
+      "implements_decisions": [
+        "Q-001-D",
+        "Q-002-C"
+      ]
+    },
+    {
+      "id": "ACT-007",
+      "phase": "PHASE-02",
+      "title": "Normalizzare gli stati ammessi nel Registry",
+      "status": "TODO",
+      "operation": "REPLACE_CONTENT",
+      "remove": [
+        "I 51 valori di stato liberi o narrativi presenti nel Registry v0.7."
+      ],
+      "add": [
+        "Vocabolario controllato: DRAFT, ACTIVE, FROZEN, FINAL, SUPERSEDED, INVALIDATED, CANCELLED, EXECUTED, ACCEPTED."
+      ],
+      "replace": [
+        {
+          "source": "Colonna Stato del Registry v0.7",
+          "destination": "Colonna Stato del Registry v0.8",
+          "change": "Sostituire frasi narrative con uno stato canonico; spostare spiegazioni nella colonna Note."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Ogni riga deve avere un solo stato canonico.",
+        "Le note possono spiegare autorevolezza, autenticità storica o limitazioni.",
+        "Non usare titoli o frasi del corpo come stato."
+      ],
+      "depends_on": [
+        "ACT-006"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Il Registry usa soltanto gli stati canonici."
+      ],
+      "implements_decisions": []
+    },
+    {
+      "id": "ACT-008",
+      "phase": "PHASE-02",
+      "title": "Ricostruire tutte le catene Sostituisce",
+      "status": "TODO",
+      "operation": "REPLACE_CONTENT",
+      "remove": [
+        "Valori vuoti di Sostituisce dove esiste una versione precedente."
+      ],
+      "add": [
+        "Relazioni esplicite tra ogni versione e la versione immediatamente precedente."
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Per ogni famiglia versionata, collegare v0.2→v0.1, v0.3→v0.2 e così via.",
+        "Per rinomine senza cambio sostanziale, conservare lo stesso DOC-ID e registrare il nome precedente nelle note.",
+        "Per file senza predecessore reale usare `—`."
+      ],
+      "depends_on": [
+        "ACT-007"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Ogni documento versionato ha una catena completa.",
+        "Nessuna versione corrente appare scollegata dal proprio storico."
+      ],
+      "implements_decisions": []
+    },
+    {
+      "id": "ACT-009",
+      "phase": "PHASE-03",
+      "title": "Sostituire Errata Documentale v0.1",
+      "status": "TODO",
+      "operation": "MOVE_AND_REPLACE",
+      "remove": [
+        "docs/00-current/Project_Integrity_OS_Errata_Documentale_v0_1.md"
+      ],
+      "add": [
+        "docs/20-history/errata/Project_Integrity_OS_Errata_Documentale_v0_1_SUPERSEDED.md",
+        "docs/00-current/Project_Integrity_OS_Errata_Documentale_v0_2.md"
+      ],
+      "replace": [
+        {
+          "source": "Errata v0.1",
+          "destination": "Errata v0.2",
+          "change": "Aggiungere FND-001...FND-006 e collegare ogni errata agli ACT e FILE coinvolti."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Rimuovere Errata v0.1 dal tree corrente dopo averla catalogata nell'History Index con il commit che la conserva.",
+        "Creare Errata v0.2 come documento corrente.",
+        "Dichiarare che l'audit v0.1 è invalidato.",
+        "Registrare Q-001-D, Q-002-C, Q-003-C e Q-004-C come decisioni approvate.",
+        "Indicare che PRIVATE_CHILD è una categoria tecnica canonica separata e non globalmente referenziabile.",
+        "Indicare che CLOSURE_REPORT usa un'allowlist autorevole e versionata.",
+        "Indicare che la baseline Prompt/Report/Rule Catalog v0.1 non è retroattivamente globale.",
+        "Indicare che la nuova v0.2 vale soltanto dalla sua approvazione in avanti.",
+        "Non creare una copia .original.txt della v0.1."
+      ],
+      "depends_on": [
+        "ACT-008"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Errata v0.2 copre tutti i finding del secondo livello."
+      ],
+      "implements_decisions": [
+        "Q-001-D",
+        "Q-002-C",
+        "Q-003-C",
+        "Q-004-C"
+      ]
+    },
+    {
+      "id": "ACT-010",
+      "phase": "PHASE-03",
+      "title": "Sostituire Organizzazione Documenti v0.2 con v0.3",
+      "status": "TODO",
+      "operation": "REPLACE_AND_INDEX_HISTORY",
+      "remove": [
+        "docs/00-current/Project_Integrity_OS_Organizzazione_Documenti_v0_2.md",
+        "La previsione di cartelle originals/ o copie .original.txt nel tree corrente."
+      ],
+      "add": [
+        "docs/00-current/Project_Integrity_OS_Organizzazione_Documenti_v0_3.md",
+        "Regola Q-001-D: Git come archivio storico autorevole.",
+        "Regola Q-002-C: nuova baseline globale non retroattiva per prompt, report, decisioni, checkpoint, correzioni e verifiche.",
+        "Regola Q-003-C: PRIVATE_CHILD come categoria tecnica canonica separata, privata e dipendente dal genitore.",
+        "Regola Q-004-C: allowlist autorevole e versionata per i proprietari di CLOSURE_REPORT.",
+        "Regola: un solo documento corrente per famiglia in docs/00-current/.",
+        "Regola: i documenti superati già committati vengono catalogati nell'History Index e rimossi dal tree.",
+        "Regola: artefatti mai committati e non necessari restano fuori dalla repository con manifest SHA-256."
+      ],
+      "replace": [
+        {
+          "source": "Struttura task descritta in v0.2",
+          "destination": "Struttura task canonica in v0.3",
+          "change": "Allineare README, instructions, evidence, reports, decisions, verification e validation; eliminare la conservazione permanente delle versioni superseded nel tree quando sono recuperabili da Git."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Catalogare Organizzazione Documenti v0.2 nell'History Index con il commit SHA che la conserva.",
+        "Rimuovere v0.2 dal tree corrente senza duplicarla in 20-history.",
+        "Creare v0.3 come unica versione corrente.",
+        "Definire che l'inventario copre tutti i file sotto docs, non soltanto i Markdown.",
+        "Definire che README principale, History Index e Project Timeline sono i punti di accesso alla ricostruzione storica.",
+        "Integrare la baseline globale Q-002-C senza attribuirle validità retroattiva.",
+        "Definire che il set documentale di una task è proporzionato a complessità, rischio, numero di decisioni e necessità di verifica.",
+        "Distinguere esplicitamente categorie governate e globalmente referenziabili dalla categoria tecnica PRIVATE_CHILD.",
+        "Definire che le allowlist di dominio, inclusa quella di CLOSURE_REPORT, sono autorevoli, versionate e modificabili solo tramite decisione approvata."
+      ],
+      "depends_on": [
+        "ACT-009"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "La struttura descritta coincide con il tree reale finale.",
+        "Nessuna copia .original.txt è richiesta.",
+        "La politica Git/History Index è esplicita e univoca."
+      ],
+      "implements_decisions": [
+        "Q-001-D",
+        "Q-002-C",
+        "Q-003-C",
+        "Q-004-C"
+      ]
+    },
+    {
+      "id": "ACT-011",
+      "phase": "PHASE-03",
+      "title": "Aggiungere README di task e collegamenti storici nel README principale",
+      "status": "TODO",
+      "operation": "ADD_AND_UPDATE",
+      "remove": [],
+      "add": [
+        "docs/10-executions/TODO-0002/README.md",
+        "docs/10-executions/TODO-0003/README.md",
+        "Sezione `Cronologia e documentazione storica` nel README.md principale."
+      ],
+      "replace": [
+        {
+          "source": "README.md principale privo di accesso alla storia documentale",
+          "destination": "README.md con link a History Index e Project Timeline",
+          "change": "Aggiungere una sezione breve senza duplicare l'elenco completo dei documenti storici."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Ogni README di task deve indicare task, stato finale, documenti ancora presenti, report, verifica, approvazione e commit di riferimento.",
+        "I README di task devono usare link relativi verificabili.",
+        "Il README principale deve collegare `docs/00-current/Project_Integrity_OS_History_Index_v0_1.md`.",
+        "Il README principale deve collegare `docs/00-current/Project_Integrity_OS_Project_Timeline_v0_1.md`.",
+        "Il README principale deve collegare la baseline globale `Project_Integrity_OS_Prompt_Report_Rule_Catalog_Lifecycle_v0_2.md`.",
+        "Il README principale non deve contenere l'intero catalogo storico.",
+        "I README delle nuove task devono indicare quali moduli documentali della baseline v0.2 sono stati attivati e quali non erano necessari."
+      ],
+      "depends_on": [
+        "ACT-010"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "TODO-0002 e TODO-0003 hanno un indice locale completo.",
+        "Il README principale consente di raggiungere History Index e Project Timeline."
+      ],
+      "implements_decisions": [
+        "Q-001-D",
+        "Q-002-C"
+      ]
+    },
+    {
+      "id": "ACT-012",
+      "phase": "PHASE-03",
+      "title": "Catalogare e rimuovere dal tree il materiale superseded di TODO-0101",
+      "status": "TODO",
+      "operation": "INDEX_HISTORY_AND_REMOVE",
+      "remove": [
+        "docs/10-executions/TODO-0101/instructions/superseded/",
+        "Qualsiasi seconda copia Markdown della stessa identità/versione già recuperabile dal commit base."
+      ],
+      "add": [
+        "Voci nell'History Index per ogni file rimosso, con commit SHA completo e percorso storico.",
+        "Riferimento sintetico nel README di TODO-0101 alla storia recuperabile tramite Git."
+      ],
+      "replace": [
+        {
+          "source": "Link a instructions/superseded",
+          "destination": "Link all'History Index o al commit SHA pertinente",
+          "change": "Aggiornare README, checkpoint, Registry e documenti correnti."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Inventariare tutti i file della cartella superseded prima della rimozione.",
+        "Verificare che ciascun file esista nel commit base o in un altro commit stabile.",
+        "Aggiungere una voce distinta nell'History Index per ogni file.",
+        "Rimuovere la cartella superseded dal tree corrente dopo la verifica.",
+        "Non creare una nuova cartella superseded in un altro percorso."
+      ],
+      "depends_on": [
+        "ACT-024"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "La cartella superseded di TODO-0101 non resta nel tree.",
+        "Ogni file rimosso è catalogato e recuperabile tramite Git.",
+        "Nessun link corrente punta alla cartella rimossa."
+      ],
+      "implements_decisions": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "id": "ACT-013",
+      "phase": "PHASE-04",
+      "title": "Correggere il prompt browser finale TODO-0002",
+      "status": "TODO",
+      "operation": "REPLACE_GOVERNED_FILE",
+      "remove": [
+        "Riferimenti legacy non mappati.",
+        "Qualsiasi wrapper o copia `.original.txt` introdotta soltanto per duplicare la versione già presente in Git."
+      ],
+      "add": [
+        "Metadati espliciti Task, Versione, Stato FINAL, autenticità storica e commit che conserva la versione precedente."
+      ],
+      "replace": [
+        {
+          "source": "Riferimenti legacy non mappati",
+          "destination": "Riferimenti canonici o note storiche con commit SHA",
+          "change": "Il file governato viene corretto; la versione precedente resta recuperabile da Git."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Mantenere il prompt finale realmente utilizzato come artefatto della task.",
+        "Correggere soltanto identità, metadati e riferimenti documentali.",
+        "Registrare nell'History Index il percorso e il commit della versione precedente.",
+        "Non creare wrapper, sidecar o copie originali duplicate."
+      ],
+      "depends_on": [
+        "ACT-012"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Filename, metadati e riferimenti sono coerenti.",
+        "La versione precedente è recuperabile tramite Git."
+      ],
+      "implements_decisions": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "id": "ACT-014",
+      "phase": "PHASE-04",
+      "title": "Correggere Start Here browser finale TODO-0002",
+      "status": "TODO",
+      "operation": "REPLACE_GOVERNED_FILE",
+      "remove": [
+        "Riferimento non risolto a Project_Integrity_OS_Brief_TODO-0002.md.",
+        "Eventuali copie originali duplicate nel tree."
+      ],
+      "add": [
+        "Riferimento al brief realmente utilizzato.",
+        "Metadati Versione v0.1 e Stato FINAL.",
+        "Nota con commit SHA che conserva la versione precedente."
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Mantenere il documento perché descrive la procedura realmente usata.",
+        "Correggere il riferimento al brief senza creare un alias fittizio.",
+        "Catalogare la versione precedente nell'History Index."
+      ],
+      "depends_on": [
+        "ACT-013"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Nessun riferimento a file inesistente resta senza spiegazione.",
+        "La storia precedente è recuperabile tramite Git."
+      ],
+      "implements_decisions": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "id": "ACT-015",
+      "phase": "PHASE-04",
+      "title": "Correggere Start Here chiusura TODO-0002",
+      "status": "TODO",
+      "operation": "REPLACE_CONTENT",
+      "remove": [
+        "Riferimento ambiguo a close_todo_0002.py."
+      ],
+      "add": [
+        "Riferimento esatto a Project_Integrity_OS_Chiusura_TODO-0002_v0_1_EXECUTED.py.",
+        "Metadato Stato EXECUTED."
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Indicare che `close_todo_0002.py` era eventualmente il nome operativo precedente, se dimostrabile.",
+        "Non inventare alias se non supportato: in assenza di evidenza, dichiarare il mismatch come errata."
+      ],
+      "depends_on": [
+        "ACT-014",
+        "ACT-003"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Il documento punta all'artefatto realmente presente e registrato."
+      ],
+      "implements_decisions": []
+    },
+    {
+      "id": "ACT-016",
+      "phase": "PHASE-04",
+      "title": "Catalogare e rimuovere il Brief TODO-0002 v0.1 superseded",
+      "status": "TODO",
+      "operation": "INDEX_HISTORY_AND_REMOVE",
+      "remove": [
+        "docs/10-executions/TODO-0002/superseded/Project_Integrity_OS_Brief_TODO-0002_v0_1_SUPERSEDED.md"
+      ],
+      "add": [
+        "Voce History Index con nome, percorso nel commit, SHA completo, stato SUPERSEDED e documento sostitutivo."
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Verificare che il file sia presente in un commit stabile.",
+        "Catalogarlo nell'History Index.",
+        "Rimuoverlo dal tree corrente.",
+        "Non riscrivere il contenuto e non creare una copia .original.txt."
+      ],
+      "depends_on": [
+        "ACT-015"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Il file non è nel tree ed è recuperabile dal commit indicato."
+      ],
+      "implements_decisions": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "id": "ACT-017",
+      "phase": "PHASE-04",
+      "title": "Catalogare e rimuovere il Brief TODO-0002 v0.2 superseded",
+      "status": "TODO",
+      "operation": "INDEX_HISTORY_AND_REMOVE",
+      "remove": [
+        "docs/10-executions/TODO-0002/superseded/Project_Integrity_OS_Brief_TODO-0002_v0_2_SUPERSEDED.md"
+      ],
+      "add": [
+        "Voce History Index che spiega che il documento era CORRENTE durante l'esecuzione e oggi è SUPERSEDED.",
+        "Commit SHA completo e percorso storico."
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Non correggere retroattivamente lo stato CORRENTE nel file storico.",
+        "Spiegare la differenza temporale nell'History Index.",
+        "Rimuovere il file dal tree corrente dopo la verifica Git."
+      ],
+      "depends_on": [
+        "ACT-016"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "La contraddizione temporale è spiegata nell'History Index.",
+        "Il file non è duplicato nel tree."
+      ],
+      "implements_decisions": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "id": "ACT-018",
+      "phase": "PHASE-04",
+      "title": "Catalogare e rimuovere prompt e Start Here desktop superseded di TODO-0002",
+      "status": "TODO",
+      "operation": "INDEX_HISTORY_AND_REMOVE",
+      "remove": [
+        "docs/10-executions/TODO-0002/superseded/Project_Integrity_OS_Prompt_Esecutivo_Desktop_TODO-0002_v0_1_SUPERSEDED.md",
+        "docs/10-executions/TODO-0002/superseded/Project_Integrity_OS_Start_Here_Desktop_TODO-0002_v0_1_SUPERSEDED.md"
+      ],
+      "add": [
+        "Due voci separate nell'History Index con commit SHA e motivo: varianti desktop non usate nella sessione browser."
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Verificare la presenza dei due file nel commit storico.",
+        "Catalogarli separatamente.",
+        "Rimuoverli dal tree corrente."
+      ],
+      "depends_on": [
+        "ACT-017"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Entrambi i file sono recuperabili tramite Git e non restano nel tree."
+      ],
+      "implements_decisions": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "id": "ACT-019",
+      "phase": "PHASE-04",
+      "title": "Aggiungere identità documentale al report TODO-0003",
+      "status": "TODO",
+      "operation": "REPLACE_GOVERNED_FILE",
+      "remove": [
+        "Qualsiasi wrapper o copia originale duplicata del report già conservato in Git."
+      ],
+      "add": [
+        "H1 `# Project Integrity OS`.",
+        "H2 `## Report esecutivo — TODO-0003 — v0.1`.",
+        "Metadati Task, Versione, Stato FINAL, tipo Report originale/raw."
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Mantenere il report perché è un artefatto finale della task.",
+        "Aggiungere H1, H2 e metadati senza modificare il corpo delle dichiarazioni dell'esecutore.",
+        "Catalogare nell'History Index la versione precedente con commit SHA completo.",
+        "Non creare wrapper o copie .original.txt."
+      ],
+      "depends_on": [
+        "ACT-018"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Il report è identificabile senza alterare le dichiarazioni originali."
+      ],
+      "implements_decisions": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "id": "ACT-020",
+      "phase": "PHASE-04",
+      "title": "Catalogare e rimuovere i sei documenti concettuali storici superseded",
+      "status": "TODO",
+      "operation": "INDEX_HISTORY_AND_REMOVE",
+      "remove": [
+        "docs/20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_1_SUPERSEDED.md",
+        "docs/20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_2_SUPERSEDED.md",
+        "docs/20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_3_SUPERSEDED.md",
+        "docs/20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_4_SUPERSEDED.md",
+        "docs/20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_5_SUPERSEDED.md",
+        "docs/20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_6_SUPERSEDED.md"
+      ],
+      "add": [
+        "Sei voci ordinate nell'History Index, ciascuna con nome legacy, versione, percorso storico, commit SHA e successore."
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Verificare per ogni versione il commit che la conserva.",
+        "Catalogare le versioni in ordine v0.1...v0.6.",
+        "Rimuovere i sei file dal tree corrente.",
+        "Non creare wrapper, sidecar o copie .original.txt."
+      ],
+      "depends_on": [
+        "ACT-019"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Le sei versioni sono recuperabili tramite Git.",
+        "Nessuna versione concettuale superseded resta nel tree corrente."
+      ],
+      "implements_decisions": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "id": "ACT-021",
+      "phase": "PHASE-04",
+      "title": "Correggere il riferimento history/history nel Decision Log v0.7",
+      "status": "TODO",
+      "operation": "REPLACE_CONTENT",
+      "remove": [
+        "Versione precedente: history/Project_Integrity_OS_Decision_Log_TODO-0101_v0_6_DRAFT.md"
+      ],
+      "add": [
+        "Versione precedente: Project_Integrity_OS_Decision_Log_TODO-0101_v0_6_DRAFT.md"
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Correggere solo il riferimento relativo.",
+        "Non modificare le decisioni contenute nello snapshot storico."
+      ],
+      "depends_on": [
+        "ACT-020"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Il link relativo risolve al file v0.6 nella stessa cartella history."
+      ],
+      "implements_decisions": []
+    },
+    {
+      "id": "ACT-022",
+      "phase": "PHASE-04",
+      "title": "Rimuovere la doppia identità Markdown del brief TODO-0101 v0.1",
+      "status": "TODO",
+      "operation": "INDEX_HISTORY_AND_REMOVE_DUPLICATE",
+      "remove": [
+        "docs/10-executions/TODO-0101/instructions/superseded/history/Project_Integrity_OS_Brief_TODO-0101_v0_1_DRAFT_ORIGINAL.md",
+        "Qualsiasi copia `.original.txt` equivalente."
+      ],
+      "add": [
+        "Voce History Index con commit SHA e percorso originario del brief."
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Verificare il commit che conserva l'originale.",
+        "Catalogare l'originale nell'History Index.",
+        "Rimuovere la doppia identità dal tree.",
+        "Mantenere nel tree soltanto l'eventuale documento corrente realmente necessario."
+      ],
+      "depends_on": [
+        "ACT-021"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Esiste una sola identità governata attiva per il Brief TODO-0101 v0.1.",
+        "L'originale è recuperabile tramite Git."
+      ],
+      "implements_decisions": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "id": "ACT-023",
+      "phase": "PHASE-03",
+      "title": "Applicare Q-001-D: Git come archivio storico autorevole",
+      "status": "TODO",
+      "operation": "IMPLEMENT_APPROVED_DECISION",
+      "remove": [
+        "Copie `.original.txt` previste o già introdotte come duplicati di file presenti in Git.",
+        "Wrapper creati esclusivamente per conservare una seconda copia di documenti storici già committati.",
+        "Versioni SUPERSEDED, bozze e checkpoint non più necessari al lavoro corrente, dopo catalogazione nell'History Index.",
+        "Pacchetti ZIP, backup, output temporanei e bozze mai approvate dal tree della repository."
+      ],
+      "add": [
+        "docs/00-current/Project_Integrity_OS_History_Index_v0_1.md",
+        "docs/00-current/Project_Integrity_OS_Project_Timeline_v0_1.md",
+        "Sezione `Cronologia e documentazione storica` nel README.md principale.",
+        "Per ogni documento rimosso: nome, percorso storico, commit SHA completo, task, stato storico, documento sostitutivo e motivo della rimozione.",
+        "Per ogni milestone: sequenza, data, evento, task, documenti principali e commit SHA completo."
+      ],
+      "replace": [
+        {
+          "source": "Conservazione delle versioni superate nel tree corrente",
+          "destination": "Catalogazione storica tramite Git e History Index",
+          "change": "Il contenuto storico resta recuperabile dal commit SHA; il tree contiene solo documenti correnti, artefatti finali di task ed evidenze necessarie."
+        },
+        {
+          "source": "README principale come eventuale catalogo completo",
+          "destination": "README principale come punto di accesso sintetico",
+          "change": "Il dettaglio completo resta nell'History Index e nella Project Timeline."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Creare l'History Index con SHA completi, non abbreviati.",
+        "Registrare per ogni documento storico rimosso il percorso esatto nel commit che lo conserva.",
+        "Creare la Project Timeline come sequenza cronologica di task, decisioni e milestone.",
+        "Aggiornare il README principale con due link relativi, senza duplicare le tabelle storiche.",
+        "Mantenere nel tree solo documenti correnti, brief e prompt realmente usati quando ancora necessari come artefatti finali, report originali, verifiche, decisioni approvate, evidenze e approvazioni.",
+        "Rimuovere dal tree documenti superati già presenti in Git dopo averli catalogati.",
+        "Conservare fuori dalla repository gli artefatti mai committati e non necessari, accompagnati da manifest SHA-256.",
+        "Non riscrivere i commit storici citati; evitare force-push su main.",
+        "I tag milestone possono essere aggiunti successivamente, ma non sostituiscono il commit SHA completo."
+      ],
+      "depends_on": [
+        "ACT-011"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "History Index presente e completo.",
+        "Project Timeline presente e completa per i commit già esistenti.",
+        "README principale collega entrambi i documenti.",
+        "Nessun duplicato .original.txt resta nel tree.",
+        "Ogni documento storico rimosso è recuperabile con `git show <SHA>:<percorso>`.",
+        "Il tree corrente contiene soltanto documentazione utile al progetto attuale o necessaria come evidenza finale."
+      ],
+      "implements_decisions": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "id": "ACT-024",
+      "phase": "PHASE-03",
+      "title": "Applicare Q-002-C e creare la baseline globale Prompt/Report/Rule Catalog v0.2",
+      "status": "TODO",
+      "operation": "IMPLEMENT_APPROVED_DECISION",
+      "remove": [
+        "docs/00-current/Project_Integrity_OS_Prompt_Report_Rule_Catalog_Lifecycle_v0_1.md",
+        "Qualsiasi dichiarazione che renda retroattivamente globale la v0.1.",
+        "Qualsiasi regola che imponga a ogni task futura di produrre sempre lo stesso numero di documenti."
+      ],
+      "add": [
+        "docs/00-current/Project_Integrity_OS_Prompt_Report_Rule_Catalog_Lifecycle_v0_2.md",
+        "Voce History Index per la v0.1 con ambito storico TODO-0003 e commit SHA completo.",
+        "Voce Project Timeline per l'approvazione della nuova baseline globale v0.2.",
+        "Riferimento alla v0.2 nel README principale.",
+        "Riferimento alla v0.2 nel Document Registry v0.8.",
+        "Riferimento alla v0.2 in Organizzazione Documenti v0.3.",
+        "Riferimento alla v0.2 nella To-Do corrente."
+      ],
+      "replace": [
+        {
+          "source": "Project_Integrity_OS_Prompt_Report_Rule_Catalog_Lifecycle_v0_1.md",
+          "destination": "Project_Integrity_OS_Prompt_Report_Rule_Catalog_Lifecycle_v0_2.md",
+          "change": "La v0.1 resta storica e riferita a TODO-0003; la v0.2 diventa baseline globale corrente solo dalla sua approvazione in avanti."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Verificare il commit stabile che conserva la v0.1.",
+        "Catalogare la v0.1 nell'History Index con nome, percorso, SHA completo, ambito TODO-0003, stato SUPERSEDED e successore v0.2.",
+        "Rimuovere la v0.1 da docs/00-current senza riscriverla retroattivamente.",
+        "Creare integralmente la v0.2 come nuova baseline globale non retroattiva.",
+        "Dichiarare nella v0.2 che il metodo deriva dall'esperienza documentale consolidata durante TODO-0101.",
+        "Definire moduli documentali distinti: task contract/brief, prompt, analisi, decision log, decisioni individuali, checkpoint, correction set, report, evidenze, verifica, validazione e gate.",
+        "Definire che non tutti i moduli sono obbligatori per ogni task.",
+        "Definire criteri deterministici per attivare i moduli: complessità, rischio, numero di decisioni, impatto trasversale, necessità di checkpoint e verifica.",
+        "Definire identificatori stabili per decisioni, correzioni, finding, criteri, evidenze e verifiche.",
+        "Definire collegamenti obbligatori tra i documenti prodotti.",
+        "Definire versionamento, stato canonico, documento sostituito e data di validità.",
+        "Definire la distinzione tra decisione approvata e documento ancora DRAFT.",
+        "Definire l'obbligo di registrare ogni nuovo documento nel Document Registry.",
+        "Definire l'obbligo di aggiornare History Index e Project Timeline quando un documento viene sostituito o una milestone viene approvata.",
+        "Definire un gate prima del commit e un audit finale del tree completo.",
+        "Aggiornare README principale, To-Do corrente, Organizzazione Documenti e Registry con la nuova baseline."
+      ],
+      "depends_on": [
+        "ACT-023"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "La v0.1 resta recuperabile tramite Git e non è descritta come globale retroattiva.",
+        "La v0.2 è l'unica baseline globale corrente della famiglia.",
+        "La v0.2 dichiara una data o un commit di entrata in vigore.",
+        "La v0.2 formalizza il metodo TODO-0101 senza imporre sempre venti documenti.",
+        "Ogni modulo ha scopo, trigger di attivazione, identificatore e relazione con gli altri moduli.",
+        "Registry, To-Do, Organizzazione Documenti, History Index, Project Timeline e README sono coerenti con Q-002-C."
+      ],
+      "implements_decisions": [
+        "Q-001-D",
+        "Q-002-C"
+      ]
+    },
+    {
+      "id": "ACT-025",
+      "phase": "PHASE-05",
+      "title": "Applicare Q-003-C: PRIVATE_CHILD come categoria tecnica canonica separata",
+      "status": "TODO",
+      "operation": "IMPLEMENT_APPROVED_DECISION",
+      "remove": [
+        "Qualsiasi elenco che presenti PRIVATE_CHILD sullo stesso piano delle categorie governate e globalmente referenziabili.",
+        "Qualsiasi regola che permetta a PRIVATE_CHILD di entrare nel Global Registry.",
+        "Qualsiasi regola che permetta riferimenti globali arbitrari verso PRIVATE_CHILD.",
+        "Qualsiasi lifecycle autonomo implicito per PRIVATE_CHILD.",
+        "Qualsiasi possibilità per PRIVATE_CHILD di possedere CLOSURE_REPORT."
+      ],
+      "add": [
+        "Definizione canonica di PRIVATE_CHILD come categoria tecnica privata.",
+        "Regola: ogni PRIVATE_CHILD appartiene obbligatoriamente a un solo genitore.",
+        "Regola: PRIVATE_CHILD non può esistere senza il proprio genitore.",
+        "Regola: PRIVATE_CHILD non può cambiare genitore liberamente.",
+        "Regola: PRIVATE_CHILD non viene registrato nel Global Registry.",
+        "Regola: PRIVATE_CHILD non può essere destinazione di riferimenti globali.",
+        "Regola: l'eventuale identificatore è tecnico e locale al contesto del genitore.",
+        "Regola: PRIVATE_CHILD non possiede normalmente un lifecycle autonomo.",
+        "Regola: cancellazione o archiviazione del genitore comporta gestione coordinata dei figli privati.",
+        "Regola: eventuali eccezioni richiedono una decisione architetturale esplicita."
+      ],
+      "replace": [
+        {
+          "source": "Documento decisionale 10 e documenti che elencano le categorie canoniche",
+          "destination": "Classificazione a due livelli coerente con Q-003-C",
+          "change": "Separare le categorie governate e globalmente referenziabili dalla categoria tecnica canonica PRIVATE_CHILD."
+        },
+        {
+          "source": "Formulazione generica `PRIVATE_CHILD è una categoria canonica`",
+          "destination": "`PRIVATE_CHILD è una categoria tecnica canonica, privata, non globalmente referenziabile e dipendente dal genitore`",
+          "change": "Eliminare ogni ambiguità sul ruolo e sulla visibilità."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Aggiornare `Project_Integrity_OS_10_Integrita_Trasversale_Anti_Orfano_TODO-0101_v0_3_DRAFT.md`.",
+        "Aggiornare il Correction Set di TODO-0101.",
+        "Aggiornare il Decision Log corrente di TODO-0101.",
+        "Aggiornare tutti i documenti che presentano l'elenco canonico delle categorie.",
+        "Aggiornare la futura baseline Prompt/Report/Rule Catalog v0.2 se contiene regole sulle categorie di entità.",
+        "Registrare Q-003-C nel Document Registry, nella Project Timeline e nei README pertinenti.",
+        "Definire un vincolo deterministico che impedisca PRIVATE_CHILD orfani.",
+        "Definire che un riferimento globale verso PRIVATE_CHILD è invalido.",
+        "Definire che l'identificatore locale di PRIVATE_CHILD non deve essere esposto come identità pubblica del progetto.",
+        "Aggiornare il futuro Entity Catalog e Constraint Catalog quando saranno prodotti.",
+        "Aggiungere test futuri per: figlio senza genitore, cambio genitore non autorizzato, riferimento globale vietato e rimozione coordinata."
+      ],
+      "depends_on": [
+        "ACT-024"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Tutti gli elenchi di categorie distinguono chiaramente categorie governate e PRIVATE_CHILD.",
+        "PRIVATE_CHILD non appare nel Global Registry.",
+        "PRIVATE_CHILD non è globalmente referenziabile.",
+        "PRIVATE_CHILD appartiene a un solo genitore e non può restare orfano.",
+        "PRIVATE_CHILD non possiede CLOSURE_REPORT.",
+        "Correction Set, Decision Log e documento decisionale 10 sono coerenti."
+      ],
+      "implements_decisions": [
+        "Q-003-C"
+      ]
+    },
+    {
+      "id": "ACT-026",
+      "phase": "PHASE-05",
+      "title": "Applicare Q-004-C: allowlist versionata per CLOSURE_REPORT",
+      "status": "TODO",
+      "operation": "IMPLEMENT_APPROVED_DECISION",
+      "remove": [
+        "La regola generica secondo cui qualunque entità con stato CLOSED può possedere CLOSURE_REPORT.",
+        "La lista dei cinque owner type trattata come vincolo architetturale immutabile e sparso nel codice.",
+        "Qualsiasi accettazione di owner_type arbitrari o stringhe libere.",
+        "Qualsiasi possibilità per PRIVATE_CHILD di possedere CLOSURE_REPORT."
+      ],
+      "add": [
+        "Allowlist autorevole e versionata dei tipi proprietari ammessi per CLOSURE_REPORT.",
+        "Versione iniziale MVP: PROJECT, PHASE, WORK_ITEM, TASK e BASELINE.",
+        "Regola: lo stato CLOSED non abilita automaticamente CLOSURE_REPORT.",
+        "Regola: un owner type è valido soltanto se presente nell'allowlist attiva.",
+        "Regola: PRIVATE_CHILD è sempre escluso dall'allowlist.",
+        "Regola: l'aggiunta di un nuovo owner type richiede una decisione architetturale approvata.",
+        "Regola: ogni estensione aggiorna cataloghi, lifecycle, vincoli, documentazione, migrazioni e test.",
+        "Regola: l'allowlist possiede versione, stato e data o commit di entrata in vigore."
+      ],
+      "replace": [
+        {
+          "source": "Documento decisionale 14, Correction Set e Decision Log",
+          "destination": "Regola unica coerente con Q-004-C",
+          "change": "Definire owner_type tramite allowlist autorevole e versionata, con cinque valori iniziali e procedura controllata di estensione."
+        },
+        {
+          "source": "Controllo tramite stringa libera o elenco duplicato in più punti",
+          "destination": "Unica fonte autorevole della allowlist",
+          "change": "Il codice e i vincoli devono dipendere dalla stessa definizione canonica."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Aggiornare `Project_Integrity_OS_14_Cardinalita_Tabelle_Associative_TODO-0101_v0_3_DRAFT.md`.",
+        "Aggiornare il Correction Set di TODO-0101.",
+        "Aggiornare il Decision Log corrente di TODO-0101.",
+        "Registrare Q-004-C nel Document Registry, nella Project Timeline e nei README pertinenti.",
+        "Definire l'allowlist iniziale con PROJECT, PHASE, WORK_ITEM, TASK e BASELINE.",
+        "Definire che PRIVATE_CHILD non può essere aggiunto all'allowlist.",
+        "Definire che una nuova entità non entra automaticamente nell'allowlist quando acquisisce lo stato CLOSED.",
+        "Definire la procedura di estensione: decisione approvata, lifecycle, criteri di chiusura, evidenze, aggiornamento cataloghi e vincoli, eventuale migrazione e test.",
+        "Aggiornare il futuro Entity Catalog e Constraint Catalog quando saranno prodotti.",
+        "Aggiungere test futuri per owner type consentito, owner type vietato, stringa arbitraria, versione allowlist e tentativo PRIVATE_CHILD."
+      ],
+      "depends_on": [
+        "ACT-025"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Esiste una sola regola autorevole per CLOSURE_REPORT.",
+        "L'allowlist iniziale contiene soltanto PROJECT, PHASE, WORK_ITEM, TASK e BASELINE.",
+        "PRIVATE_CHILD è escluso.",
+        "Owner type arbitrari vengono rifiutati.",
+        "Ogni estensione richiede una decisione approvata e aggiornamenti coordinati.",
+        "Documento decisionale 14, Correction Set e Decision Log sono coerenti."
+      ],
+      "implements_decisions": [
+        "Q-004-C"
+      ]
+    },
+    {
+      "id": "ACT-027",
+      "phase": "PHASE-06",
+      "title": "Invalidare Audit Documentale v0.1 e creare v0.2",
+      "status": "TODO",
+      "operation": "MOVE_AND_REPLACE",
+      "remove": [
+        "docs/10-executions/TODO-0101/analysis/verification/Project_Integrity_OS_Audit_Documentale_TODO-0101_v0_1.md"
+      ],
+      "add": [
+        "docs/10-executions/TODO-0101/analysis/verification/history/Project_Integrity_OS_Audit_Documentale_TODO-0101_v0_1_INVALIDATED.md",
+        "docs/10-executions/TODO-0101/analysis/verification/Project_Integrity_OS_Audit_Documentale_TODO-0101_v0_2_DRAFT.md"
+      ],
+      "replace": [
+        {
+          "source": "Conclusione FINAL della v0.1",
+          "destination": "Nota INVALIDATED",
+          "change": "La v0.2 deve includere controllo Markdown e non Markdown, Registry, link, metadati e decisioni risolte."
+        }
+      ],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Conservare la v0.1 come prova dell'audit incompleto.",
+        "Creare Audit Documentale v0.2 soltanto dopo l'applicazione di Q-001-D, Q-002-C, Q-003-C e Q-004-C.",
+        "Verificare esplicitamente la portata non retroattiva della baseline Prompt/Report/Rule Catalog v0.2.",
+        "Verificare la separazione tra categorie governate e PRIVATE_CHILD.",
+        "Verificare l'allowlist versionata di CLOSURE_REPORT.",
+        "La v0.2 potrà diventare FINAL solo dopo ACT-028."
+      ],
+      "depends_on": [
+        "ACT-026"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "L'audit corrente non contiene conclusioni smentite dai finding."
+      ],
+      "implements_decisions": []
+    },
+    {
+      "id": "ACT-028",
+      "phase": "PHASE-06",
+      "title": "Rieseguire il controllo completo del tree docs",
+      "status": "TODO",
+      "operation": "VERIFY",
+      "remove": [],
+      "add": [
+        "Report finale con inventario di tutti i file sotto docs, non solo .md."
+      ],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Controllare UTF-8, NUL, marker Git, code fence, link, nome/versione/stato, duplicati e hash.",
+        "Confrontare tutti i file del commit base con il tree finale.",
+        "Verificare che ogni documento governato presente nel tree sia nel Registry.",
+        "Verificare che ogni documento storico rimosso sia nell'History Index con commit SHA completo e percorso recuperabile.",
+        "Verificare che la Project Timeline copra i commit e le milestone già consolidate.",
+        "Verificare che README principale e README di task abbiano link relativi validi.",
+        "Verificare che non esistano copie .original.txt o wrapper duplicativi non autorizzati.",
+        "Verificare che la v0.1 Prompt/Report/Rule Catalog sia storica e legata a TODO-0003.",
+        "Verificare che la v0.2 Prompt/Report/Rule Catalog sia globale soltanto dalla sua entrata in vigore.",
+        "Verificare che le nuove task usino moduli proporzionati e non un numero fisso di documenti.",
+        "Verificare che i nuovi documenti logici siano registrati in Registry, History Index, Project Timeline e README pertinenti.",
+        "Verificare che PRIVATE_CHILD sia categoria tecnica separata, privata, dipendente dal genitore e non globalmente referenziabile.",
+        "Verificare che PRIVATE_CHILD non sia nel Global Registry e non possa possedere CLOSURE_REPORT.",
+        "Verificare che CLOSURE_REPORT accetti soltanto owner type presenti nell'allowlist attiva.",
+        "Verificare che l'allowlist iniziale contenga PROJECT, PHASE, WORK_ITEM, TASK e BASELINE.",
+        "Verificare che l'estensione dell'allowlist richieda decisione approvata, aggiornamento di cataloghi, vincoli, migrazioni e test.",
+        "Verificare che ogni ID DOC sia unico e stabile.",
+        "Verificare che tutti i link relativi risolvano."
+      ],
+      "depends_on": [
+        "ACT-027"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Zero FAIL.",
+        "Zero decisioni aperte.",
+        "Zero file mancanti rispetto al commit base salvo rimozioni catalogate nell'History Index o esplicitamente approvate.",
+        "Zero documenti storici rimossi senza SHA e percorso di recupero.",
+        "PRIVATE_CHILD è coerente in tutti i documenti.",
+        "L'allowlist CLOSURE_REPORT è coerente in tutti i documenti.",
+        "Audit v0.2 può essere promosso a FINAL."
+      ],
+      "implements_decisions": []
+    },
+    {
+      "id": "ACT-029",
+      "phase": "PHASE-06",
+      "title": "Autorizzare il commit soltanto dopo esito completo",
+      "status": "TODO",
+      "operation": "GATE",
+      "remove": [],
+      "add": [],
+      "replace": [],
+      "reintegrate": [],
+      "exact_instructions": [
+        "Eseguire git diff --check e controllo scope.",
+        "Produrre elenco esatto dei file aggiunti, spostati, sostituiti e reintegrati.",
+        "Chiedere autorizzazione esplicita prima del commit.",
+        "Non eseguire push senza autorizzazione separata."
+      ],
+      "depends_on": [
+        "ACT-028"
+      ],
+      "blocked_by_questions": [],
+      "acceptance": [
+        "Tutti gli ACT precedenti sono DONE.",
+        "Audit v0.2 è FINAL.",
+        "Working tree contiene solo modifiche documentali approvate."
+      ],
+      "implements_decisions": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q-001",
+      "title": "Come conservare la storia mantenendo il progetto pulito e ordinato?",
+      "plain_explanation": "La cronologia completa non deve essere mantenuta duplicando nel tree corrente ogni versione superata. Git conserva già il contenuto dei file nei commit. Il tree operativo deve contenere soltanto documenti correnti, artefatti finali delle task ed evidenze necessarie.",
+      "why_it_matters": [
+        "Il progetto deve restare leggibile e ordinato durante lo sviluppo.",
+        "Le versioni superate devono restare recuperabili senza occupare il tree corrente.",
+        "Il README principale deve offrire un accesso semplice alla storia senza trasformarsi in un registro enorme.",
+        "La ricostruzione step by step deve basarsi su commit SHA completi, History Index e Project Timeline."
+      ],
+      "example": "Una To-Do v0.5 ormai sostituita può essere rimossa dal tree corrente se esiste nel commit `bb4c31bdd58f67432c27d491c92467b6a57a6e52`. L'History Index conserva nome, percorso, stato storico e SHA; il file può essere recuperato con `git show <SHA>:<percorso>`.",
+      "options": [
+        {
+          "code": "Q-001-A",
+          "label": "Originali dentro il repository come .original.txt",
+          "result": "Ogni originale byte-identico viene salvato in una cartella `originals/`; il Markdown governato contiene metadati corretti e punta all'originale.",
+          "advantages": [
+            "Repository autosufficiente",
+            "Audit byte-per-byte possibile offline"
+          ],
+          "disadvantages": [
+            "Più file",
+            "Tree documentale più pesante"
+          ],
+          "decision_status": "NOT_SELECTED"
+        },
+        {
+          "code": "Q-001-B",
+          "label": "Originali soltanto nel pacchetto esterno",
+          "result": "Nel repository restano solo i Markdown governati; gli originali sono conservati in ZIP/backup esterno con hash.",
+          "advantages": [
+            "Repository più pulito"
+          ],
+          "disadvantages": [
+            "Il repository da solo non contiene tutta la prova storica",
+            "Rischio di perdere il pacchetto esterno"
+          ],
+          "decision_status": "NOT_SELECTED"
+        },
+        {
+          "code": "Q-001-C",
+          "label": "Originali Markdown immutati più sidecar di metadati",
+          "result": "Gli originali `.md` restano esattamente come furono usati; un file separato `.metadata.json` o un Registry descrive nome canonico, stato attuale, alias e correzioni.",
+          "advantages": [
+            "Nessuna riscrittura storica",
+            "Meno duplicazione del contenuto"
+          ],
+          "disadvantages": [
+            "Il singolo Markdown può continuare a mostrare un titolo storico sbagliato",
+            "Serve consultare anche i metadati"
+          ],
+          "decision_status": "NOT_SELECTED"
+        },
+        {
+          "code": "Q-001-D",
+          "label": "Git come archivio storico autorevole e tree corrente essenziale",
+          "result": "Le versioni superate già committate vengono rimosse dal tree corrente e registrate nell'History Index con commit SHA completo e percorso storico. Il README principale collega History Index e Project Timeline. Non vengono create copie `.original.txt`.",
+          "advantages": [
+            "Repository pulita e facilmente navigabile",
+            "Storia completa recuperabile tramite Git",
+            "Nessuna duplicazione degli originali",
+            "Base adatta a una futura visualizzazione step by step"
+          ],
+          "disadvantages": [
+            "La ricostruzione completa richiede la cronologia Git",
+            "I commit SHA citati non devono essere riscritti",
+            "Gli artefatti mai committati richiedono un archivio esterno con manifest"
+          ],
+          "decision_status": "APPROVED"
+        }
+      ],
+      "recommended_option": "Q-001-D",
+      "recommendation_reason": "Decisione approvata dall'utente: consente di mantenere il progetto pulito e ordinato senza perdere la ricostruzione storica. Git conserva il contenuto; History Index e Project Timeline lo rendono catalogabile e visualizzabile.",
+      "blocks_action_ids": [],
+      "status": "RESOLVED",
+      "decision_id": "Q-001-D",
+      "selected_option": "Q-001-D",
+      "decision_text": "Q-001-D — Git come archivio storico autorevole. Il tree corrente contiene soltanto documenti operativi, autorevoli o necessari come evidenza finale. Le versioni superate già presenti in Git vengono rimosse dal tree senza duplicarle e vengono registrate nell'History Index con nome, percorso, commit SHA completo, task, stato storico, documento sostitutivo e motivo della rimozione. Il README principale collega History Index e Project Timeline. Gli artefatti mai committati e non necessari restano fuori dalla repository con manifest SHA-256. I commit citati non devono essere riscritti.",
+      "implementation_rules": [
+        "Un solo documento corrente per famiglia in docs/00-current/.",
+        "Nessuna copia `.original.txt` per file già conservati in Git.",
+        "I documenti SUPERSEDED non necessari vengono rimossi dal tree dopo la catalogazione.",
+        "Gli artefatti finali di task e le evidenze necessarie possono restare nel tree.",
+        "Ogni documento storico rimosso deve avere commit SHA completo e percorso recuperabile.",
+        "Il README principale contiene solo collegamenti sintetici a History Index e Project Timeline.",
+        "I file mai committati e non necessari vengono conservati fuori dalla repository con manifest SHA-256.",
+        "Niente force-push o riscrittura dei commit storici referenziati."
+      ],
+      "implemented_by_action_ids": [
+        "ACT-006",
+        "ACT-009",
+        "ACT-010",
+        "ACT-011",
+        "ACT-012",
+        "ACT-013",
+        "ACT-014",
+        "ACT-016",
+        "ACT-017",
+        "ACT-018",
+        "ACT-019",
+        "ACT-020",
+        "ACT-022",
+        "ACT-023",
+        "ACT-028"
+      ]
+    },
+    {
+      "id": "Q-002",
+      "title": "Come rendere globale il metodo documentale senza modificare retroattivamente la baseline v0.1?",
+      "plain_explanation": "La v0.1 resta autentica e riferita a TODO-0003. Non viene riscritta facendo finta che fosse già una regola globale. Una nuova v0.2 raccoglie e formalizza, da questo momento in avanti, il metodo modulare sperimentato durante TODO-0101.",
+      "why_it_matters": [
+        "La storia di TODO-0003 deve restare autentica.",
+        "Le nuove task devono avere una regola documentale comune e non ambigua.",
+        "Il metodo di TODO-0101 ha dimostrato l'utilità di separare analisi, decisioni, checkpoint, correzioni e verifica.",
+        "Una task semplice non deve essere costretta a produrre venti documenti.",
+        "Ogni nuovo documento logico deve essere registrato e collegato al resto del progetto."
+      ],
+      "example": "TODO-0101 ha richiesto numerosi documenti perché conteneva molte decisioni architetturali collegate. Una task semplice potrà usare solo brief, prompt, report e verifica. Una task complessa potrà aggiungere Decision Log, decisioni individuali, checkpoint e Correction Set. La logica è comune; il numero di file dipende dalla necessità reale.",
+      "options": [
+        {
+          "code": "Q-002-A",
+          "label": "Solo TODO-0003",
+          "result": "Il documento resta storico; per le task successive serve un nuovo standard.",
+          "advantages": [
+            "Nessuna estensione retroattiva"
+          ],
+          "disadvantages": [
+            "Manca oggi uno standard globale successivo"
+          ],
+          "decision_status": "NOT_SELECTED"
+        },
+        {
+          "code": "Q-002-B",
+          "label": "TODO-0003 e tutte le task successive",
+          "result": "La v0.1 resta vincolante globalmente finché non viene sostituita.",
+          "advantages": [
+            "Regola unica immediata"
+          ],
+          "disadvantages": [
+            "Estende la portata oltre ciò che il testo originario dichiara"
+          ],
+          "decision_status": "NOT_SELECTED"
+        },
+        {
+          "code": "Q-002-C",
+          "label": "Principi globali, dettagli TODO-0003; creare una v0.2 globale",
+          "result": "La v0.1 resta autentica per TODO-0003; i principi riutilizzabili confluiscono in una nuova versione globale esplicitamente approvata.",
+          "advantages": [
+            "Nessuna falsificazione",
+            "Baseline futura chiara"
+          ],
+          "disadvantages": [
+            "Richiede scrivere e approvare un nuovo documento"
+          ],
+          "decision_status": "APPROVED"
+        }
+      ],
+      "recommended_option": "Q-002-C",
+      "recommendation_reason": "Decisione approvata dall'utente: nessuna retroattività; la v0.2 diventa la nuova baseline globale per il futuro e formalizza il metodo documentale consolidato durante TODO-0101.",
+      "blocks_action_ids": [],
+      "status": "RESOLVED",
+      "decision_id": "Q-002-C",
+      "selected_option": "Q-002-C",
+      "decision_text": "Q-002-C — Nuova baseline globale non retroattiva. Project_Integrity_OS_Prompt_Report_Rule_Catalog_Lifecycle_v0_1.md resta un documento storico legato a TODO-0003. La nuova v0.2 diventa la baseline globale corrente dalla propria approvazione in avanti. La v0.2 formalizza il metodo modulare sperimentato durante TODO-0101, ma non impone un numero fisso di documenti: ogni task attiva soltanto i moduli richiesti da complessità, rischio, decisioni e verifica.",
+      "implementation_rules": [
+        "La v0.1 non viene riscritta né resa retroattivamente globale.",
+        "La v0.1 viene catalogata nell'History Index con ambito TODO-0003 e commit SHA completo.",
+        "La v0.2 è una nuova versione integrale e autorevole.",
+        "La v0.2 entra in vigore soltanto dalla propria approvazione o commit.",
+        "Il metodo distingue almeno brief/task contract, prompt, analisi, decisioni, checkpoint, correzioni, report, evidenze, verifica, validazione e gate.",
+        "Non tutti i moduli sono obbligatori per ogni task.",
+        "L'attivazione dei moduli dipende da complessità, rischio, impatto trasversale, numero di decisioni e necessità di verifica.",
+        "Decisioni, correzioni e finding usano identificatori stabili.",
+        "Ogni documento dichiara versione, stato, predecessore, task e relazioni.",
+        "Le decisioni approvate sono distinte dai documenti ancora DRAFT.",
+        "Ogni nuovo documento logico viene registrato nel Document Registry.",
+        "History Index e Project Timeline vengono aggiornati quando documenti o milestone cambiano.",
+        "README principale e README di task collegano la baseline e i documenti pertinenti.",
+        "Prima del commit sono obbligatori gate e audit finale del tree completo."
+      ],
+      "implemented_by_action_ids": [
+        "ACT-006",
+        "ACT-009",
+        "ACT-010",
+        "ACT-011",
+        "ACT-024",
+        "ACT-027",
+        "ACT-028"
+      ]
+    },
+    {
+      "id": "Q-003",
+      "title": "Qual è il ruolo canonico di PRIVATE_CHILD?",
+      "plain_explanation": "PRIVATE_CHILD resta nel modello, ma non è una normale entità governata e globalmente referenziabile. È una categoria tecnica canonica che vive esclusivamente dentro un solo genitore e non possiede identità pubblica autonoma.",
+      "why_it_matters": [
+        "Impedisce di confondere una chiave tecnica locale con un'identità di dominio globale.",
+        "Evita figli orfani e riferimenti esterni verso record che dovrebbero restare privati.",
+        "Mantiene la classificazione consolidata senza equiparare PRIVATE_CHILD alle entità principali.",
+        "Chiarisce lifecycle, cancellazione, visibilità e responsabilità del genitore.",
+        "Esclude esplicitamente PRIVATE_CHILD da CLOSURE_REPORT e dal Global Registry."
+      ],
+      "example": "Una condizione interna di una TASK può avere una chiave primaria tecnica, ma non deve essere cercata o referenziata globalmente come una TASK autonoma. Se la TASK viene eliminata o archiviata, anche la condizione deve essere gestita in modo coordinato con il genitore.",
+      "options": [
+        {
+          "code": "Q-003-A",
+          "label": "Inserirla come settima categoria canonica",
+          "result": "Tutti i documenti elencano PRIVATE_CHILD insieme alle altre categorie.",
+          "advantages": [
+            "Coerenza con C-0101-009",
+            "Classificazione completa"
+          ],
+          "disadvantages": [
+            "Può sembrare equivalente alle entità governate principali"
+          ],
+          "decision_status": "NOT_SELECTED"
+        },
+        {
+          "code": "Q-003-B",
+          "label": "Escluderla dalle categorie canoniche",
+          "result": "PRIVATE_CHILD resta un dettaglio implementativo non governato come categoria.",
+          "advantages": [
+            "Elenco principale più semplice"
+          ],
+          "disadvantages": [
+            "Conflitto con la classificazione consolidata già registrata"
+          ],
+          "decision_status": "NOT_SELECTED"
+        },
+        {
+          "code": "Q-003-C",
+          "label": "Categoria tecnica separata dalle categorie governate",
+          "result": "Il modello dichiara sei categorie governate più PRIVATE_CHILD come categoria tecnica non referenziabile globalmente.",
+          "advantages": [
+            "Evita ambiguità",
+            "Preserva la classificazione consolidata"
+          ],
+          "disadvantages": [
+            "Richiede distinguere due livelli di classificazione"
+          ],
+          "decision_status": "APPROVED"
+        }
+      ],
+      "recommended_option": "Q-003-C",
+      "recommendation_reason": "Decisione approvata dall'utente: preserva PRIVATE_CHILD nel modello, ma chiarisce che è una categoria tecnica privata, locale e dipendente.",
+      "blocks_action_ids": [],
+      "status": "RESOLVED",
+      "decision_id": "Q-003-C",
+      "selected_option": "Q-003-C",
+      "decision_text": "Q-003-C — PRIVATE_CHILD è una categoria tecnica canonica separata dalle categorie governate e globalmente referenziabili. Ogni PRIVATE_CHILD appartiene a un solo genitore, non può esistere senza di esso, non entra nel Global Registry, non è destinazione di riferimenti globali, non possiede normalmente un lifecycle autonomo e non può possedere CLOSURE_REPORT. L'eventuale identificatore è tecnico e locale.",
+      "implementation_rules": [
+        "PRIVATE_CHILD appartiene obbligatoriamente a un solo genitore.",
+        "PRIVATE_CHILD non può esistere senza il genitore.",
+        "PRIVATE_CHILD non può cambiare genitore liberamente.",
+        "PRIVATE_CHILD non è registrato nel Global Registry.",
+        "PRIVATE_CHILD non può essere destinazione di riferimenti globali.",
+        "L'eventuale ID di PRIVATE_CHILD è tecnico e locale.",
+        "PRIVATE_CHILD non possiede normalmente un lifecycle autonomo.",
+        "Cancellazione o archiviazione del genitore comporta gestione coordinata dei figli privati.",
+        "PRIVATE_CHILD non può possedere CLOSURE_REPORT.",
+        "Ogni eccezione richiede una decisione architetturale esplicita."
+      ],
+      "implemented_by_action_ids": [
+        "ACT-009",
+        "ACT-010",
+        "ACT-025",
+        "ACT-027",
+        "ACT-028"
+      ]
+    },
+    {
+      "id": "Q-004",
+      "title": "Come viene governata l'ownership di CLOSURE_REPORT?",
+      "plain_explanation": "CLOSURE_REPORT non può appartenere a qualunque record con stato CLOSED e non deve dipendere da stringhe libere. Una sola allowlist autorevole e versionata stabilisce i tipi proprietari ammessi.",
+      "why_it_matters": [
+        "Impedisce report di chiusura per entità prive di un vero lifecycle formale.",
+        "Mantiene il primo MVP deterministico con cinque owner type approvati.",
+        "Evita elenchi duplicati e divergenti nel codice e nei documenti.",
+        "Permette estensioni future senza rendere arbitrario owner_type.",
+        "Collega ogni estensione a lifecycle, evidenze, vincoli, migrazioni e test."
+      ],
+      "example": "Nel primo MVP TASK può possedere CLOSURE_REPORT perché è presente nell'allowlist. PRIVATE_CHILD non può possederlo. Una futura RELEASE potrà essere aggiunta solo dopo una decisione approvata che definisca lifecycle, criteri di chiusura, evidenze e aggiornamenti tecnici.",
+      "options": [
+        {
+          "code": "Q-004-A",
+          "label": "Qualunque entità governata che supporta CLOSED",
+          "result": "La regola dipende dalla capacità lifecycle dell'entità, non da una lista fissa.",
+          "advantages": [
+            "Flessibile",
+            "Coerente con un transition engine"
+          ],
+          "disadvantages": [
+            "Richiede un catalogo affidabile delle entità chiudibili"
+          ],
+          "decision_status": "NOT_SELECTED"
+        },
+        {
+          "code": "Q-004-B",
+          "label": "Solo PROJECT, PHASE, WORK_ITEM, TASK e BASELINE",
+          "result": "Il database usa una allowlist fissa di cinque owner type.",
+          "advantages": [
+            "Semplice e deterministico nel MVP"
+          ],
+          "disadvantages": [
+            "Potrebbe richiedere migrazioni per nuovi owner type"
+          ],
+          "decision_status": "NOT_SELECTED"
+        },
+        {
+          "code": "Q-004-C",
+          "label": "Allowlist versionata nel catalogo",
+          "result": "Il MVP parte dai cinque tipi elencati, ma la regola autorevole è una allowlist catalogata e versionata, estendibile tramite decisione.",
+          "advantages": [
+            "Deterministico oggi",
+            "Estendibile senza ambiguità"
+          ],
+          "disadvantages": [
+            "Richiede un oggetto di configurazione/catalogo in più"
+          ],
+          "decision_status": "APPROVED"
+        }
+      ],
+      "recommended_option": "Q-004-C",
+      "recommendation_reason": "Decisione approvata dall'utente: conserva un perimetro MVP limitato e deterministico, ma permette estensioni future controllate e versionate.",
+      "blocks_action_ids": [],
+      "status": "RESOLVED",
+      "decision_id": "Q-004-C",
+      "selected_option": "Q-004-C",
+      "decision_text": "Q-004-C — CLOSURE_REPORT usa un'allowlist autorevole, controllata e versionata dei tipi proprietari ammessi. L'allowlist iniziale del MVP contiene PROJECT, PHASE, WORK_ITEM, TASK e BASELINE. Lo stato CLOSED non è sufficiente per entrare automaticamente nell'allowlist. PRIVATE_CHILD è escluso. Ogni estensione richiede una decisione architetturale approvata e l'aggiornamento coordinato di lifecycle, cataloghi, vincoli, documentazione, eventuali migrazioni e test.",
+      "implementation_rules": [
+        "CLOSURE_REPORT può appartenere soltanto a un tipo presente nell'allowlist attiva.",
+        "L'allowlist iniziale contiene PROJECT, PHASE, WORK_ITEM, TASK e BASELINE.",
+        "Avere lo stato CLOSED non abilita automaticamente CLOSURE_REPORT.",
+        "PRIVATE_CHILD è escluso dall'allowlist.",
+        "owner_type arbitrari o stringhe libere sono vietati.",
+        "L'allowlist è autorevole, versionata e possiede una data o un commit di entrata in vigore.",
+        "L'aggiunta di un nuovo owner type richiede una decisione architetturale approvata.",
+        "Ogni estensione aggiorna lifecycle, criteri di chiusura, evidenze, cataloghi, vincoli, documentazione, eventuali migrazioni e test.",
+        "Il codice e la documentazione devono dipendere dalla stessa definizione canonica."
+      ],
+      "implemented_by_action_ids": [
+        "ACT-009",
+        "ACT-010",
+        "ACT-026",
+        "ACT-027",
+        "ACT-028"
+      ]
+    }
+  ],
+  "file_audit": [
+    {
+      "number": 1,
+      "file_id": "FILE-001",
+      "path": "00-current/Project_Integrity_OS_Convenzioni_Tecniche_v0_2.md",
+      "status": "PASS",
+      "finding": "Documento corrente coerente con nome, posizione, versione e stato dichiarato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 2,
+      "file_id": "FILE-002",
+      "path": "00-current/Project_Integrity_OS_Document_Registry_v0_7.md",
+      "status": "FAIL",
+      "finding": "Il registro non è affidabile: cambia identificatori DOC stabili dopo le rinomine, omette DOC-027 (`.py`), usa come stato frasi estratte dal corpo e lascia quasi sempre `Sostituisce` vuoto.",
+      "action_ids": [
+        "ACT-005",
+        "ACT-006",
+        "ACT-007",
+        "ACT-008"
+      ],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 3,
+      "file_id": "FILE-003",
+      "path": "00-current/Project_Integrity_OS_Errata_Documentale_v0_1.md",
+      "status": "FAIL",
+      "finding": "L'errata attiva non contiene i finding del controllo di secondo livello e rimanda a originali esterni al repository senza collocazione persistente nel tree.",
+      "action_ids": [
+        "ACT-009"
+      ],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 4,
+      "file_id": "FILE-004",
+      "path": "00-current/Project_Integrity_OS_Flussi_MVP_v0_2_FROZEN.md",
+      "status": "PASS",
+      "finding": "Documento corrente coerente con nome, posizione, versione e stato dichiarato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 5,
+      "file_id": "FILE-005",
+      "path": "00-current/Project_Integrity_OS_Modalita_Esecuzione_v0_1.md",
+      "status": "PASS",
+      "finding": "Documento corrente coerente con nome, posizione, versione e stato dichiarato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 6,
+      "file_id": "FILE-006",
+      "path": "00-current/Project_Integrity_OS_Organizzazione_Documenti_v0_2.md",
+      "status": "FAIL",
+      "finding": "La struttura dichiarata non coincide con il tree: README assenti per TODO-0002/TODO-0003; `superseded/` di TODO-0101 è sotto `instructions/`; la policy sugli originali non è applicata uniformemente.",
+      "action_ids": [
+        "ACT-010"
+      ],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 7,
+      "file_id": "FILE-007",
+      "path": "00-current/Project_Integrity_OS_Prompt_Report_Rule_Catalog_Lifecycle_v0_1.md",
+      "status": "REVIEW",
+      "finding": "Q-002-C ha risolto la portata: la v0.1 resta storica e riferita a TODO-0003. ACT-024 deve catalogarla tramite Git, rimuoverla da 00-current e sostituirla con una nuova v0.2 globale non retroattiva.",
+      "action_ids": [
+        "ACT-024"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D",
+        "Q-002-C"
+      ]
+    },
+    {
+      "number": 8,
+      "file_id": "FILE-008",
+      "path": "00-current/Project_Integrity_OS_Standard_Report_Sviluppo_v0_2.md",
+      "status": "PASS",
+      "finding": "Documento corrente coerente con nome, posizione, versione e stato dichiarato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 9,
+      "file_id": "FILE-009",
+      "path": "00-current/Project_Integrity_OS_TODO_MVP_v0_9.md",
+      "status": "PASS",
+      "finding": "Documento corrente coerente con nome, posizione, versione e stato dichiarato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 10,
+      "file_id": "FILE-010",
+      "path": "10-executions/TODO-0002/instructions/Project_Integrity_OS_Brief_TODO-0002_v0_3_FINAL.md",
+      "status": "REVIEW",
+      "finding": "Contenuto e stato FINAL sono coerenti, ma l'originale byte-identico è dichiarato soltanto nel pacchetto esterno, non nel repository.",
+      "action_ids": [
+        "ACT-023"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 11,
+      "file_id": "FILE-011",
+      "path": "10-executions/TODO-0002/instructions/Project_Integrity_OS_Prompt_Esecutivo_Browser_TODO-0002_v0_1_FINAL.md",
+      "status": "FAIL",
+      "finding": "Il filename dichiara FINAL senza metadato interno FINAL; sono presenti riferimenti legacy non mappati e l'originale è soltanto esterno.",
+      "action_ids": [
+        "ACT-013"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 12,
+      "file_id": "FILE-012",
+      "path": "10-executions/TODO-0002/instructions/Project_Integrity_OS_Start_Here_Browser_TODO-0002_v0_1_FINAL.md",
+      "status": "FAIL",
+      "finding": "Il filename dichiara FINAL senza metadato interno FINAL; la procedura cita `Project_Integrity_OS_Brief_TODO-0002.md`, file oggi inesistente, senza mappatura.",
+      "action_ids": [
+        "ACT-014"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 13,
+      "file_id": "FILE-013",
+      "path": "10-executions/TODO-0002/instructions/closure/Project_Integrity_OS_Start_Here_Chiusura_TODO-0002_v0_1_EXECUTED.md",
+      "status": "FAIL",
+      "finding": "Il filename dichiara EXECUTED senza metadato interno EXECUTED; cita `close_todo_0002.py`, mentre l'artefatto realmente registrato ha un altro nome.",
+      "action_ids": [
+        "ACT-015"
+      ],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 14,
+      "file_id": "FILE-014",
+      "path": "10-executions/TODO-0002/reports/Project_Integrity_OS_Report_Esecutivo_TODO-0002_v0_1.md",
+      "status": "PASS",
+      "finding": "Documento di task coerente con nome, cartella, versione e ruolo storico o operativo.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 15,
+      "file_id": "FILE-015",
+      "path": "10-executions/TODO-0002/reports/Project_Integrity_OS_Verifica_Indipendente_TODO-0002_v0_1.md",
+      "status": "PASS",
+      "finding": "Documento di task coerente con nome, cartella, versione e ruolo storico o operativo.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 16,
+      "file_id": "FILE-016",
+      "path": "10-executions/TODO-0002/superseded/Project_Integrity_OS_Brief_TODO-0002_v0_1_SUPERSEDED.md",
+      "status": "FAIL",
+      "finding": "Il filename dichiara SUPERSEDED senza metadato interno SUPERSEDED.",
+      "action_ids": [
+        "ACT-016"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 17,
+      "file_id": "FILE-017",
+      "path": "10-executions/TODO-0002/superseded/Project_Integrity_OS_Brief_TODO-0002_v0_2_SUPERSEDED.md",
+      "status": "FAIL",
+      "finding": "Contraddizione diretta: il filename dichiara SUPERSEDED, ma il contenuto dichiara `Stato: CORRENTE`.",
+      "action_ids": [
+        "ACT-017"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 18,
+      "file_id": "FILE-018",
+      "path": "10-executions/TODO-0002/superseded/Project_Integrity_OS_Prompt_Esecutivo_Desktop_TODO-0002_v0_1_SUPERSEDED.md",
+      "status": "FAIL",
+      "finding": "Il filename dichiara SUPERSEDED senza metadato interno; la vista normalizzata lascia riferimenti legacy non risolti.",
+      "action_ids": [
+        "ACT-018"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 19,
+      "file_id": "FILE-019",
+      "path": "10-executions/TODO-0002/superseded/Project_Integrity_OS_Start_Here_Desktop_TODO-0002_v0_1_SUPERSEDED.md",
+      "status": "FAIL",
+      "finding": "Il filename dichiara SUPERSEDED senza metadato interno e l'identità documentale è incompleta.",
+      "action_ids": [
+        "ACT-018"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 20,
+      "file_id": "FILE-020",
+      "path": "10-executions/TODO-0002/validation/approvals/Project_Integrity_OS_Approvazione_Umana_TODO-0002_v0_1.md",
+      "status": "PASS",
+      "finding": "Documento di task coerente con nome, cartella, versione e ruolo storico o operativo.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 21,
+      "file_id": "FILE-021",
+      "path": "10-executions/TODO-0002/validation/exceptions/Project_Integrity_OS_Deviazione_DEV-TODO-0002-001_v0_1.md",
+      "status": "PASS",
+      "finding": "Documento di task coerente con nome, cartella, versione e ruolo storico o operativo.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 22,
+      "file_id": "FILE-022",
+      "path": "10-executions/TODO-0003/instructions/Project_Integrity_OS_Prompt_Esecutivo_Browser_TODO-0003_v0_1.md",
+      "status": "PASS",
+      "finding": "Documento di task coerente con nome, cartella, versione e ruolo storico o operativo.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 23,
+      "file_id": "FILE-023",
+      "path": "10-executions/TODO-0003/reports/Project_Integrity_OS_Report_Esecutivo_TODO-0003_v0_1.md",
+      "status": "FAIL",
+      "finding": "Mancano titolo H1 e metadati minimi di identità/versione/stato; il file inizia direttamente con `## ESITO DICHIARATO`.",
+      "action_ids": [
+        "ACT-019"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 24,
+      "file_id": "FILE-024",
+      "path": "10-executions/TODO-0003/reports/Project_Integrity_OS_Verifica_Indipendente_TODO-0003_v0_1.md",
+      "status": "PASS",
+      "finding": "Documento di task coerente con nome, cartella, versione e ruolo storico o operativo.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 25,
+      "file_id": "FILE-025",
+      "path": "10-executions/TODO-0003/validation/approvals/Project_Integrity_OS_Approvazione_Umana_TODO-0003_v0_1.md",
+      "status": "PASS",
+      "finding": "Documento di task coerente con nome, cartella, versione e ruolo storico o operativo.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 26,
+      "file_id": "FILE-026",
+      "path": "10-executions/TODO-0003/validation/notes/Project_Integrity_OS_Nota_Post_Chiusura_TODO-0003_v0_1.md",
+      "status": "PASS",
+      "finding": "Documento di task coerente con nome, cartella, versione e ruolo storico o operativo.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 27,
+      "file_id": "FILE-027",
+      "path": "10-executions/TODO-0101/README.md",
+      "status": "REVIEW",
+      "finding": "Dichiara `main` come branch autorevole, mentre la normalizzazione documentale è ancora non committata sul branch review. Occorre distinguere baseline 382c96f e audit pending.",
+      "action_ids": [
+        "ACT-027"
+      ],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 28,
+      "file_id": "FILE-028",
+      "path": "10-executions/TODO-0101/analysis/checkpoints/Project_Integrity_OS_Checkpoint_Index_TODO-0101_v0_8_DRAFT.md",
+      "status": "REVIEW",
+      "finding": "Dichiara checkpoint successivo all'audit documentale; l'audit v0.1 deve invece essere superseded e il tree di audit non è ancora integrato.",
+      "action_ids": [
+        "ACT-027"
+      ],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 29,
+      "file_id": "FILE-029",
+      "path": "10-executions/TODO-0101/analysis/checkpoints/history/Project_Integrity_OS_Checkpoint_Index_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 30,
+      "file_id": "FILE-030",
+      "path": "10-executions/TODO-0101/analysis/checkpoints/history/Project_Integrity_OS_Checkpoint_Index_TODO-0101_v0_3_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 31,
+      "file_id": "FILE-031",
+      "path": "10-executions/TODO-0101/analysis/checkpoints/history/Project_Integrity_OS_Checkpoint_Index_TODO-0101_v0_4_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 32,
+      "file_id": "FILE-032",
+      "path": "10-executions/TODO-0101/analysis/checkpoints/history/Project_Integrity_OS_Checkpoint_Index_TODO-0101_v0_5_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 33,
+      "file_id": "FILE-033",
+      "path": "10-executions/TODO-0101/analysis/checkpoints/history/Project_Integrity_OS_Checkpoint_Index_TODO-0101_v0_6_DRAFT.md",
+      "status": "REVIEW",
+      "finding": "La vista storica normalizzata è leggibile, ma l'originale dichiarato come `.original.txt` non è nel repository. Serve una scelta di conservazione persistente.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 34,
+      "file_id": "FILE-034",
+      "path": "10-executions/TODO-0101/analysis/checkpoints/history/Project_Integrity_OS_Checkpoint_Index_TODO-0101_v0_7_DRAFT.md",
+      "status": "REVIEW",
+      "finding": "La vista storica normalizzata è leggibile, ma l'originale dichiarato come `.original.txt` non è nel repository. Serve una scelta di conservazione persistente.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 35,
+      "file_id": "FILE-035",
+      "path": "10-executions/TODO-0101/analysis/decision-log/Project_Integrity_OS_Decision_Log_TODO-0101_v0_8_DRAFT.md",
+      "status": "REVIEW",
+      "finding": "La separazione tra decisioni di analisi e schema fisico non approvato è corretta, ma il documento incorpora come completato un audit che non è valido.",
+      "action_ids": [
+        "ACT-027"
+      ],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 36,
+      "file_id": "FILE-036",
+      "path": "10-executions/TODO-0101/analysis/decision-log/history/Project_Integrity_OS_Decision_Log_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 37,
+      "file_id": "FILE-037",
+      "path": "10-executions/TODO-0101/analysis/decision-log/history/Project_Integrity_OS_Decision_Log_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 38,
+      "file_id": "FILE-038",
+      "path": "10-executions/TODO-0101/analysis/decision-log/history/Project_Integrity_OS_Decision_Log_TODO-0101_v0_3_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 39,
+      "file_id": "FILE-039",
+      "path": "10-executions/TODO-0101/analysis/decision-log/history/Project_Integrity_OS_Decision_Log_TODO-0101_v0_4_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 40,
+      "file_id": "FILE-040",
+      "path": "10-executions/TODO-0101/analysis/decision-log/history/Project_Integrity_OS_Decision_Log_TODO-0101_v0_5_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 41,
+      "file_id": "FILE-041",
+      "path": "10-executions/TODO-0101/analysis/decision-log/history/Project_Integrity_OS_Decision_Log_TODO-0101_v0_6_DRAFT.md",
+      "status": "REVIEW",
+      "finding": "La vista storica normalizzata è leggibile, ma l'originale dichiarato come `.original.txt` non è nel repository. Serve una scelta di conservazione persistente.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 42,
+      "file_id": "FILE-042",
+      "path": "10-executions/TODO-0101/analysis/decision-log/history/Project_Integrity_OS_Decision_Log_TODO-0101_v0_7_DRAFT.md",
+      "status": "FAIL",
+      "finding": "Il campo `Versione precedente` usa `history/...` pur essendo già dentro `history/`, generando concettualmente `history/history/...`.",
+      "action_ids": [
+        "ACT-021"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 43,
+      "file_id": "FILE-043",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_01_Principi_Tracciabilita_Contesto_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 44,
+      "file_id": "FILE-044",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_02_Modello_Gerarchico_Contesto_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 45,
+      "file_id": "FILE-045",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_03_Context_Package_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 46,
+      "file_id": "FILE-046",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_04_Provenienza_Informazioni_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 47,
+      "file_id": "FILE-047",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_05_Sintesi_Drill_Down_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 48,
+      "file_id": "FILE-048",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_06_Requisiti_Test_Tracciabilita_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 49,
+      "file_id": "FILE-049",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_07_Lifecycle_Decisioni_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 50,
+      "file_id": "FILE-050",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_08_Registro_Elementi_Irrisolti_TODO-0101_v0_3_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 51,
+      "file_id": "FILE-051",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_09_Eventi_Ricostruzione_Temporale_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 52,
+      "file_id": "FILE-052",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_10_Integrita_Trasversale_Anti_Orfano_TODO-0101_v0_3_DRAFT.md",
+      "status": "REVIEW",
+      "finding": "Q-003-C ha risolto la classificazione: PRIVATE_CHILD deve essere descritto come categoria tecnica canonica separata, privata, dipendente dal genitore e non globalmente referenziabile. ACT-025 deve aggiornare questo documento, Correction Set e Decision Log.",
+      "action_ids": [
+        "ACT-025"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-003-C"
+      ]
+    },
+    {
+      "number": 53,
+      "file_id": "FILE-053",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_11_Conservazione_Rettifiche_Cancellazione_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 54,
+      "file_id": "FILE-054",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_12_Ruoli_Permessi_Sensibilita_Redazione_TODO-0101_v0_3_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 55,
+      "file_id": "FILE-055",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_13_Transizioni_Condizioni_Complete_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 56,
+      "file_id": "FILE-056",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_14_Cardinalita_Tabelle_Associative_TODO-0101_v0_3_DRAFT.md",
+      "status": "REVIEW",
+      "finding": "Q-004-C ha risolto l'ownership: CLOSURE_REPORT deve usare una allowlist autorevole e versionata, inizialmente limitata a PROJECT, PHASE, WORK_ITEM, TASK e BASELINE. ACT-026 deve aggiornare questo documento, Correction Set e Decision Log.",
+      "action_ids": [
+        "ACT-026"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-004-C"
+      ]
+    },
+    {
+      "number": 57,
+      "file_id": "FILE-057",
+      "path": "10-executions/TODO-0101/analysis/decisions/Project_Integrity_OS_15_Schema_Completo_Implementazione_Progressiva_TODO-0101_v0_3_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento decisionale ordinato e coerente con la catena di versione; nessun conflitto certo rilevato.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 58,
+      "file_id": "FILE-058",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_01_Principi_Tracciabilita_Contesto_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 59,
+      "file_id": "FILE-059",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_02_Modello_Gerarchico_Contesto_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 60,
+      "file_id": "FILE-060",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_03_Context_Package_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 61,
+      "file_id": "FILE-061",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_04_Provenienza_Informazioni_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 62,
+      "file_id": "FILE-062",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_05_Sintesi_Drill_Down_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 63,
+      "file_id": "FILE-063",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_06_Requisiti_Test_Tracciabilita_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 64,
+      "file_id": "FILE-064",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_07_Lifecycle_Decisioni_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 65,
+      "file_id": "FILE-065",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_08_Registro_Elementi_Irrisolti_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 66,
+      "file_id": "FILE-066",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_08_Registro_Elementi_Irrisolti_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 67,
+      "file_id": "FILE-067",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_09_Eventi_Ricostruzione_Temporale_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 68,
+      "file_id": "FILE-068",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_10_Integrita_Trasversale_Anti_Orfano_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 69,
+      "file_id": "FILE-069",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_10_Integrita_Trasversale_Anti_Orfano_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 70,
+      "file_id": "FILE-070",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_11_Conservazione_Rettifiche_Cancellazione_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 71,
+      "file_id": "FILE-071",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_12_Ruoli_Permessi_Sensibilita_Redazione_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 72,
+      "file_id": "FILE-072",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_12_Ruoli_Permessi_Sensibilita_Redazione_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 73,
+      "file_id": "FILE-073",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_13_Transizioni_Condizioni_Complete_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 74,
+      "file_id": "FILE-074",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_14_Cardinalita_Tabelle_Associative_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 75,
+      "file_id": "FILE-075",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_14_Cardinalita_Tabelle_Associative_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 76,
+      "file_id": "FILE-076",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_15_Schema_Completo_Implementazione_Progressiva_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 77,
+      "file_id": "FILE-077",
+      "path": "10-executions/TODO-0101/analysis/decisions/history/Project_Integrity_OS_15_Schema_Completo_Implementazione_Progressiva_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 78,
+      "file_id": "FILE-078",
+      "path": "10-executions/TODO-0101/analysis/verification/Project_Integrity_OS_Audit_Documentale_TODO-0101_v0_1.md",
+      "status": "FAIL",
+      "finding": "La conclusione FINAL non è sostenibile: non rileva la cancellazione dell'artefatto `.py`, i difetti del Registry, le contraddizioni di stato e le divergenze strutturali.",
+      "action_ids": [
+        "ACT-027"
+      ],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 79,
+      "file_id": "FILE-079",
+      "path": "10-executions/TODO-0101/analysis/verification/Project_Integrity_OS_Correction_Set_TODO-0101_v0_2_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento di analisi ordinato e coerente con la relativa famiglia e versione.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 80,
+      "file_id": "FILE-080",
+      "path": "10-executions/TODO-0101/analysis/verification/Project_Integrity_OS_Open_Issues_Register_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Documento di analisi ordinato e coerente con la relativa famiglia e versione.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": []
+    },
+    {
+      "number": 81,
+      "file_id": "FILE-081",
+      "path": "10-executions/TODO-0101/analysis/verification/history/Project_Integrity_OS_Correction_Set_TODO-0101_v0_1_DRAFT.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 82,
+      "file_id": "FILE-082",
+      "path": "10-executions/TODO-0101/instructions/superseded/Project_Integrity_OS_Brief_TODO-0101_v0_1_SUPERSEDED.md",
+      "status": "REVIEW",
+      "finding": "È correttamente non eseguibile, ma descrive come corrente Decision Log v0.7; ora esiste v0.8. Va definito se resta snapshot o se serve un wrapper successivo.",
+      "action_ids": [
+        "ACT-012",
+        "ACT-022"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 83,
+      "file_id": "FILE-083",
+      "path": "10-executions/TODO-0101/instructions/superseded/history/Project_Integrity_OS_Brief_TODO-0101_v0_1_DRAFT_ORIGINAL.md",
+      "status": "FAIL",
+      "finding": "Duplica nel tree la stessa identità/versione v0.1 del brief superseded e contraddice la policy che colloca gli originali fuori dai Markdown correnti.",
+      "action_ids": [
+        "ACT-012",
+        "ACT-022"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 84,
+      "file_id": "FILE-084",
+      "path": "20-history/analysis/Project_Integrity_OS_Modello_Informativo_Pre-TODO-0003_v0_1.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 85,
+      "file_id": "FILE-085",
+      "path": "20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_1_SUPERSEDED.md",
+      "status": "REVIEW",
+      "finding": "Nome ordinabile e versione corretta, ma manca il metadato interno esplicito `Stato: SUPERSEDED`; l'originale legacy è soltanto nel pacchetto esterno.",
+      "action_ids": [
+        "ACT-020"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 86,
+      "file_id": "FILE-086",
+      "path": "20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_2_SUPERSEDED.md",
+      "status": "REVIEW",
+      "finding": "Nome ordinabile e versione corretta, ma manca il metadato interno esplicito `Stato: SUPERSEDED`; l'originale legacy è soltanto nel pacchetto esterno.",
+      "action_ids": [
+        "ACT-020"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 87,
+      "file_id": "FILE-087",
+      "path": "20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_3_SUPERSEDED.md",
+      "status": "REVIEW",
+      "finding": "Nome ordinabile e versione corretta, ma manca il metadato interno esplicito `Stato: SUPERSEDED`; l'originale legacy è soltanto nel pacchetto esterno.",
+      "action_ids": [
+        "ACT-020"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 88,
+      "file_id": "FILE-088",
+      "path": "20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_4_SUPERSEDED.md",
+      "status": "REVIEW",
+      "finding": "Nome ordinabile e versione corretta, ma manca il metadato interno esplicito `Stato: SUPERSEDED`; l'originale legacy è soltanto nel pacchetto esterno.",
+      "action_ids": [
+        "ACT-020"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 89,
+      "file_id": "FILE-089",
+      "path": "20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_5_SUPERSEDED.md",
+      "status": "REVIEW",
+      "finding": "Nome ordinabile e versione corretta, ma manca il metadato interno esplicito `Stato: SUPERSEDED`; l'originale legacy è soltanto nel pacchetto esterno.",
+      "action_ids": [
+        "ACT-020"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 90,
+      "file_id": "FILE-090",
+      "path": "20-history/concept/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_6_SUPERSEDED.md",
+      "status": "REVIEW",
+      "finding": "Nome ordinabile e versione corretta, ma manca il metadato interno esplicito `Stato: SUPERSEDED`; l'originale legacy è soltanto nel pacchetto esterno.",
+      "action_ids": [
+        "ACT-020"
+      ],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 91,
+      "file_id": "FILE-091",
+      "path": "20-history/document-organization/Project_Integrity_OS_Organizzazione_Documenti_v0_1.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 92,
+      "file_id": "FILE-092",
+      "path": "20-history/flows/Project_Integrity_OS_Flussi_MVP_v0_1.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 93,
+      "file_id": "FILE-093",
+      "path": "20-history/registry/Project_Integrity_OS_Document_Registry_v0_1.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 94,
+      "file_id": "FILE-094",
+      "path": "20-history/registry/Project_Integrity_OS_Document_Registry_v0_2.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 95,
+      "file_id": "FILE-095",
+      "path": "20-history/registry/Project_Integrity_OS_Document_Registry_v0_3.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 96,
+      "file_id": "FILE-096",
+      "path": "20-history/registry/Project_Integrity_OS_Document_Registry_v0_4.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 97,
+      "file_id": "FILE-097",
+      "path": "20-history/registry/Project_Integrity_OS_Document_Registry_v0_5.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 98,
+      "file_id": "FILE-098",
+      "path": "20-history/registry/Project_Integrity_OS_Document_Registry_v0_6.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 99,
+      "file_id": "FILE-099",
+      "path": "20-history/report-standards/Project_Integrity_OS_Standard_Report_Sviluppo_v0_1.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 100,
+      "file_id": "FILE-100",
+      "path": "20-history/technical-conventions/Project_Integrity_OS_Convenzioni_Tecniche_v0_1.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 101,
+      "file_id": "FILE-101",
+      "path": "20-history/todo/Project_Integrity_OS_TODO_MVP_v0_1.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 102,
+      "file_id": "FILE-102",
+      "path": "20-history/todo/Project_Integrity_OS_TODO_MVP_v0_2.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 103,
+      "file_id": "FILE-103",
+      "path": "20-history/todo/Project_Integrity_OS_TODO_MVP_v0_3.md",
+      "status": "REVIEW",
+      "finding": "La vista storica normalizzata è leggibile, ma l'originale dichiarato come `.original.txt` non è nel repository. Serve una scelta di conservazione persistente.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 104,
+      "file_id": "FILE-104",
+      "path": "20-history/todo/Project_Integrity_OS_TODO_MVP_v0_4.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 105,
+      "file_id": "FILE-105",
+      "path": "20-history/todo/Project_Integrity_OS_TODO_MVP_v0_5.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 106,
+      "file_id": "FILE-106",
+      "path": "20-history/todo/Project_Integrity_OS_TODO_MVP_v0_6.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 107,
+      "file_id": "FILE-107",
+      "path": "20-history/todo/Project_Integrity_OS_TODO_MVP_v0_7.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    },
+    {
+      "number": 108,
+      "file_id": "FILE-108",
+      "path": "20-history/todo/Project_Integrity_OS_TODO_MVP_v0_8.md",
+      "status": "PASS",
+      "finding": "Snapshot storico coerente con nome, posizione e versione; nessuna incongruenza attiva rilevata.",
+      "action_ids": [],
+      "question_ids": [],
+      "decision_ids": [
+        "Q-001-D"
+      ]
+    }
+  ],
+  "commit_gate": {
+    "id": "GATE-001",
+    "allowed": false,
+    "reason": "Tutte le decisioni Q-001-D, Q-002-C, Q-003-C e Q-004-C sono approvate, ma le azioni correttive ACT-003...ACT-028 non sono ancora completate.",
+    "required_before_commit": [
+      "Q-001-D applicata integralmente",
+      "Q-002-C applicata integralmente",
+      "Q-003-C applicata integralmente",
+      "Q-004-C applicata integralmente",
+      "ACT-003...ACT-028 completate",
+      "History Index e Project Timeline verificati",
+      "Baseline Prompt/Report/Rule Catalog v0.2 verificata",
+      "PRIVATE_CHILD coerente in tutti i documenti e cataloghi",
+      "Allowlist CLOSURE_REPORT coerente e versionata",
+      "Audit v0.2 FINAL",
+      "zero FAIL",
+      "zero questioni aperte"
+    ]
+  },
+  "version": "v0.4",
+  "supersedes": {
+    "report_id": "RPT-DOC-AUDIT-PLAN-0003",
+    "markdown": "Project_Integrity_OS_Piano_TODO_Correzione_Documentale_v0_3.md",
+    "json": "Project_Integrity_OS_Piano_TODO_Correzione_Documentale_v0_3.json"
+  },
+  "revision": {
+    "id": "REV-004",
+    "status": "ACTIVE_WORKING_PLAN",
+    "reason": "Recepimento delle decisioni approvate Q-003-C e Q-004-C. PRIVATE_CHILD viene formalizzato come categoria tecnica canonica separata dalle categorie governate e globalmente referenziabili. CLOSURE_REPORT usa un'allowlist autorevole e versionata, inizialmente limitata a PROJECT, PHASE, WORK_ITEM, TASK e BASELINE.",
+    "changes": [
+      "Q-003 trasformata da domanda aperta a decisione approvata Q-003-C.",
+      "Q-004 trasformata da domanda aperta a decisione approvata Q-004-C.",
+      "PRIVATE_CHILD definito come categoria tecnica privata, dipendente da un solo genitore e non globalmente referenziabile.",
+      "Definito che l'eventuale identificatore di PRIVATE_CHILD è tecnico e locale, non un'identità pubblica del progetto.",
+      "Definito che PRIVATE_CHILD non entra nel Global Registry, non possiede normalmente un lifecycle autonomo e non può possedere CLOSURE_REPORT.",
+      "Definita un'allowlist autorevole e versionata per i proprietari ammessi di CLOSURE_REPORT.",
+      "Definita l'allowlist iniziale MVP: PROJECT, PHASE, WORK_ITEM, TASK e BASELINE.",
+      "Definito che lo stato CLOSED, da solo, non abilita automaticamente CLOSURE_REPORT.",
+      "Definita la procedura di estensione dell'allowlist tramite decisione approvata, aggiornamento di cataloghi, vincoli, migrazioni e test.",
+      "Rimosse tutte le domande aperte dal piano.",
+      "Aggiornati ACT-025, ACT-026, FND-006, gate di commit e collegamenti file-per-file."
+    ]
+  },
+  "open_question_ids": [],
+  "resolved_decision_ids": [
+    "Q-001-D",
+    "Q-002-C",
+    "Q-003-C",
+    "Q-004-C"
+  ],
+  "next_discussion": null,
+  "next_step": {
+    "id": "NEXT-001",
+    "title": "Produrre e applicare il pacchetto correttivo documentale",
+    "status": "READY_AFTER_USER_INSERTS_PLAN",
+    "description": "Le quattro decisioni di governance sono risolte. Il passaggio successivo è trasformare il piano v0.4 in modifiche reali del tree documentale, rieseguire l'audit completo e valutare il gate di commit."
+  }
+}
