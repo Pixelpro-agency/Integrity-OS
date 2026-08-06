@@ -1,12 +1,12 @@
 {
-  "report_id": "RPT-DOC-AUDIT-PLAN-0004",
-  "title": "Project Integrity OS — Piano TODO di correzione documentale dopo audit di secondo livello — v0.4",
-  "created_at": "2026-08-06T17:04:00+02:00",
+  "report_id": "RPT-DOC-AUDIT-PLAN-0005",
+  "title": "Project Integrity OS — Piano TODO di correzione documentale dopo audit di secondo livello — v0.5",
+  "created_at": "2026-08-06T17:33:00+02:00",
   "language": "it-IT",
   "repository": "Pixelpro-agency/Integrity-OS",
   "local_branch": "review/documentation-audit-20260806",
   "base_commit": "382c96f1f93de4ef6003f92db209675ab36d3c3c",
-  "git_state": "UNCOMMITTED",
+  "git_state": "CHECKPOINT_PUSHED_WORKTREE_UNCOMMITTED",
   "overall_status": "BLOCKED_NOT_COMMITTABLE",
   "source_audit": {
     "path": "Project_Integrity_OS_Audit_Secondo_Livello_108_Markdown_v0_1.md",
@@ -171,23 +171,28 @@
     {
       "id": "ACT-001",
       "phase": "PHASE-00",
-      "title": "Bloccare commit e push",
-      "status": "TODO",
-      "operation": "FREEZE",
+      "title": "Congelare ulteriori commit e push dopo il checkpoint documentale",
+      "status": "ACTIVE_GUARD",
+      "operation": "FREEZE_AFTER_RECORDED_CHECKPOINT",
       "remove": [],
       "add": [],
       "replace": [],
       "reintegrate": [],
       "exact_instructions": [
-        "Non creare commit sul branch review/documentation-audit-20260806.",
-        "Non eseguire push.",
-        "Non integrare il branch in main finché ACT-029 non è PASS."
+        "Registrare come eccezione già eseguita il checkpoint 2f3c7f9 sul branch review/documentation-audit-20260806.",
+        "Non creare ulteriori commit o push durante ACT-002...ACT-028 senza una nuova autorizzazione esplicita dell’utente.",
+        "Non aprire pull request prima del superamento di ACT-028 e del gate ACT-029.",
+        "Non integrare il branch in main finché ACT-029 non è PASS e l’utente non autorizza esplicitamente il merge.",
+        "Non eseguire force-push sul branch di revisione o su main."
       ],
       "depends_on": [],
       "blocked_by_questions": [],
       "acceptance": [
-        "HEAD resta 382c96f1f93de4ef6003f92db209675ab36d3c3c.",
-        "Nessun nuovo commit locale o remoto."
+        "Il checkpoint 2f3c7f9 resta pubblicato sul branch remoto di revisione.",
+        "Il checkpoint contiene esclusivamente i due file del piano documentale.",
+        "Nessuna pull request è aperta come conseguenza automatica del checkpoint.",
+        "main non viene modificato o integrato.",
+        "Non vengono creati ulteriori commit o push prima di una nuova autorizzazione esplicita."
       ],
       "implements_decisions": []
     },
@@ -195,23 +200,29 @@
       "id": "ACT-002",
       "phase": "PHASE-00",
       "title": "Conservare backup e quarantena esistenti",
-      "status": "TODO",
+      "status": "NEXT",
       "operation": "PRESERVE",
       "remove": [],
       "add": [],
       "replace": [],
       "reintegrate": [],
       "exact_instructions": [
-        "Non cancellare /c/Users/Utente/Desktop/Project_Integrity_OS_document_backups/docs_before_documentation_audit_382c96f.tar.gz.",
-        "Non cancellare /c/Users/Utente/Desktop/Project_Integrity_OS_quarantine/outside_docs_20260806_152544.",
-        "Registrare SHA-256 del backup prima di una nuova applicazione."
+        "Verificare che esista /c/Users/Utente/Desktop/Project_Integrity_OS_document_backups/docs_before_documentation_audit_382c96f.tar.gz.",
+        "Verificare che il backup sia leggibile senza estrarlo sopra il working tree.",
+        "Calcolare e registrare lo SHA-256 del backup.",
+        "Verificare che esista /c/Users/Utente/Desktop/Project_Integrity_OS_quarantine/outside_docs_20260806_152544.",
+        "Verificare che la quarantena sia leggibile.",
+        "Non cancellare, spostare o modificare backup e quarantena.",
+        "Registrare nel report finale percorsi, esistenza, leggibilità e SHA-256 del backup."
       ],
       "depends_on": [
         "ACT-001"
       ],
       "blocked_by_questions": [],
       "acceptance": [
-        "Backup e quarantena esistono e sono leggibili."
+        "Backup e quarantena esistono e sono leggibili.",
+        "Lo SHA-256 del backup è registrato nel report finale.",
+        "Nessun contenuto del backup o della quarantena è stato modificato."
       ],
       "implements_decisions": []
     },
@@ -219,7 +230,7 @@
       "id": "ACT-003",
       "phase": "PHASE-01",
       "title": "Reintegrare lo script di chiusura TODO-0002",
-      "status": "TODO",
+      "status": "QUEUED_AFTER_ACT-002",
       "operation": "REINTEGRATE",
       "remove": [],
       "add": [],
@@ -232,8 +243,11 @@
       ],
       "exact_instructions": [
         "Recuperare il file esatto dal commit base, senza riscriverlo.",
-        "Verificare che il blob reintegrato sia byte-identico alla versione di main.",
-        "Registrarlo nel nuovo Document Registry con l'ID storico DOC-027."
+        "Usare il commit base 382c96f1f93de4ef6003f92db209675ab36d3c3c come sorgente autorevole.",
+        "Verificare che il blob reintegrato sia byte-identico alla versione del commit base.",
+        "Non sovrascrivere una copia locale differente senza creare un finding separato.",
+        "Registrare il file nel nuovo Document Registry con l’ID storico DOC-027 durante ACT-006.",
+        "Non creare commit o push al termine di ACT-003."
       ],
       "depends_on": [
         "ACT-002"
@@ -250,7 +264,7 @@
       "id": "ACT-004",
       "phase": "PHASE-01",
       "title": "Inventariare e reintegrare tutti i file non Markdown sotto docs",
-      "status": "TODO",
+      "status": "QUEUED_AFTER_ACT-003",
       "operation": "REINTEGRATE",
       "remove": [],
       "add": [
@@ -264,18 +278,25 @@
         }
       ],
       "exact_instructions": [
-        "Confrontare `git ls-tree -r --name-only 382c96f docs` con il tree corrente.",
+        "Confrontare `git ls-tree -r --name-only 382c96f1f93de4ef6003f92db209675ab36d3c3c docs` con il tree corrente.",
         "Filtrare tutti i percorsi che non terminano in `.md`.",
-        "Reintegrare ogni file mancante nello stesso percorso.",
-        "Non sostituire file non Markdown presenti e diversi senza un finding separato."
+        "Classificare ogni artefatto come PRESENTE_IDENTICO, MANCANTE oppure PRESENTE_DIFFERENTE.",
+        "Reintegrare soltanto gli artefatti MANCANTI nello stesso percorso relativo.",
+        "Non sostituire file PRESENTE_DIFFERENTE senza un finding separato e una decisione esplicita.",
+        "Verificare hash o identità dei blob reintegrati rispetto al commit base.",
+        "Produrre un inventario completo degli artefatti non Markdown e un report finale.",
+        "Non creare commit o push al termine di ACT-004."
       ],
       "depends_on": [
         "ACT-003"
       ],
       "blocked_by_questions": [],
       "acceptance": [
+        "Tutti i file non Markdown del commit base sono inventariati.",
         "Nessun file non Markdown presente nel commit base manca nel tree corretto.",
-        "Il confronto completo di docs non segnala cancellazioni non autorizzate."
+        "Ogni file reintegrato coincide con il blob del commit base.",
+        "Nessun file differente è stato sovrascritto automaticamente.",
+        "Il report distingue file identici, mancanti, reintegrati e differenti."
       ],
       "implements_decisions": []
     },
@@ -2929,45 +2950,50 @@
   ],
   "commit_gate": {
     "id": "GATE-001",
+    "scope": "FURTHER_CORRECTION_COMMITS_PR_AND_MERGE",
     "allowed": false,
-    "reason": "Tutte le decisioni Q-001-D, Q-002-C, Q-003-C e Q-004-C sono approvate, ma le azioni correttive ACT-003...ACT-028 non sono ancora completate.",
+    "checkpoint_exception": "2f3c7f9",
+    "reason": "Il checkpoint 2f3c7f9 è già stato pubblicato esclusivamente per conservare il piano v0.4. Non autorizza ulteriori commit, pull request o merge. Le azioni ACT-002...ACT-028 non sono ancora completate.",
     "required_before_commit": [
+      "ACT-002 completata con verifica e SHA-256 del backup",
+      "ACT-003 completata con reintegro byte-identico di DOC-027",
+      "ACT-004 completata con inventario di tutti gli artefatti non Markdown",
       "Q-001-D applicata integralmente",
       "Q-002-C applicata integralmente",
       "Q-003-C applicata integralmente",
       "Q-004-C applicata integralmente",
-      "ACT-003...ACT-028 completate",
+      "ACT-005...ACT-028 completate",
       "History Index e Project Timeline verificati",
       "Baseline Prompt/Report/Rule Catalog v0.2 verificata",
       "PRIVATE_CHILD coerente in tutti i documenti e cataloghi",
       "Allowlist CLOSURE_REPORT coerente e versionata",
       "Audit v0.2 FINAL",
       "zero FAIL",
-      "zero questioni aperte"
+      "zero questioni aperte",
+      "autorizzazione esplicita dell’utente a un nuovo commit o merge"
     ]
   },
-  "version": "v0.4",
+  "version": "v0.5",
   "supersedes": {
-    "report_id": "RPT-DOC-AUDIT-PLAN-0003",
-    "markdown": "Project_Integrity_OS_Piano_TODO_Correzione_Documentale_v0_3.md",
-    "json": "Project_Integrity_OS_Piano_TODO_Correzione_Documentale_v0_3.json"
+    "report_id": "RPT-DOC-AUDIT-PLAN-0004",
+    "markdown": "Project_Integrity_OS_Piano_TODO_Correzione_Documentale.md",
+    "json": "Project_Integrity_OS_Piano_TODO_Correzione_Documentale.json",
+    "historical_version": "v0.4"
   },
   "revision": {
-    "id": "REV-004",
+    "id": "REV-005",
     "status": "ACTIVE_WORKING_PLAN",
-    "reason": "Recepimento delle decisioni approvate Q-003-C e Q-004-C. PRIVATE_CHILD viene formalizzato come categoria tecnica canonica separata dalle categorie governate e globalmente referenziabili. CLOSURE_REPORT usa un'allowlist autorevole e versionata, inizialmente limitata a PROJECT, PHASE, WORK_ITEM, TASK e BASELINE.",
+    "reason": "Registrazione del checkpoint documentale 2f3c7f9 già pubblicato sul branch review/documentation-audit-20260806 e riallineamento della sequenza operativa: la prossima task è completare ACT-002, ACT-003 e ACT-004 senza creare ulteriori commit.",
     "changes": [
-      "Q-003 trasformata da domanda aperta a decisione approvata Q-003-C.",
-      "Q-004 trasformata da domanda aperta a decisione approvata Q-004-C.",
-      "PRIVATE_CHILD definito come categoria tecnica privata, dipendente da un solo genitore e non globalmente referenziabile.",
-      "Definito che l'eventuale identificatore di PRIVATE_CHILD è tecnico e locale, non un'identità pubblica del progetto.",
-      "Definito che PRIVATE_CHILD non entra nel Global Registry, non possiede normalmente un lifecycle autonomo e non può possedere CLOSURE_REPORT.",
-      "Definita un'allowlist autorevole e versionata per i proprietari ammessi di CLOSURE_REPORT.",
-      "Definita l'allowlist iniziale MVP: PROJECT, PHASE, WORK_ITEM, TASK e BASELINE.",
-      "Definito che lo stato CLOSED, da solo, non abilita automaticamente CLOSURE_REPORT.",
-      "Definita la procedura di estensione dell'allowlist tramite decisione approvata, aggiornamento di cataloghi, vincoli, migrazioni e test.",
-      "Rimosse tutte le domande aperte dal piano.",
-      "Aggiornati ACT-025, ACT-026, FND-006, gate di commit e collegamenti file-per-file."
+      "Registrato il checkpoint 2f3c7f9 contenente esclusivamente i due file del piano nella root del progetto.",
+      "Registrata l’esistenza del branch remoto origin/review/documentation-audit-20260806.",
+      "Confermato che non è stata creata alcuna pull request e non è stato eseguito alcun merge in main.",
+      "Rimossa la contraddizione secondo cui HEAD doveva restare al commit base dopo il checkpoint già eseguito.",
+      "ACT-001 trasformata in guardia attiva contro ulteriori commit e push non autorizzati.",
+      "ACT-002 indicata come prima azione operativa da completare.",
+      "ACT-003 e ACT-004 raggruppate nel primo blocco di reintegro degli artefatti non Markdown.",
+      "Aggiornati gate di commit, stato Git e prossimo passo operativo.",
+      "Rigenerato il Markdown senza trailing whitespace e senza righe vuote eccedenti a fine file."
     ]
   },
   "open_question_ids": [],
@@ -2979,9 +3005,66 @@
   ],
   "next_discussion": null,
   "next_step": {
-    "id": "NEXT-001",
-    "title": "Produrre e applicare il pacchetto correttivo documentale",
-    "status": "READY_AFTER_USER_INSERTS_PLAN",
-    "description": "Le quattro decisioni di governance sono risolte. Il passaggio successivo è trasformare il piano v0.4 in modifiche reali del tree documentale, rieseguire l'audit completo e valutare il gate di commit."
+    "id": "NEXT-002",
+    "title": "Completare ACT-002, ACT-003 e ACT-004",
+    "status": "READY",
+    "action_ids": [
+      "ACT-002",
+      "ACT-003",
+      "ACT-004"
+    ],
+    "description": "Verificare backup e quarantena, registrare lo SHA-256 del backup, inventariare tutti gli artefatti non Markdown del commit base e reintegrare esclusivamente quelli mancanti senza sovrascrivere file differenti.",
+    "ordered_steps": [
+      "Verificare esistenza e leggibilità di backup e quarantena.",
+      "Calcolare e registrare lo SHA-256 del backup.",
+      "Reintegrare byte-identico lo script Python DOC-027 dal commit base.",
+      "Inventariare tutti i file sotto docs che non terminano in .md nel commit base.",
+      "Classificare ogni file come identico, mancante o differente.",
+      "Reintegrare soltanto i file mancanti.",
+      "Produrre un report finale senza commit e senza push."
+    ],
+    "required_report_fields": [
+      "commit base controllato",
+      "SHA-256 del backup",
+      "numero totale di file non Markdown",
+      "file presenti e identici",
+      "file mancanti",
+      "file reintegrati",
+      "file presenti ma differenti",
+      "hash o blob dei file reintegrati",
+      "file sovrascritti",
+      "commit",
+      "push",
+      "limiti o elementi non verificati"
+    ],
+    "prohibited_during_step": [
+      "modificare il Document Registry",
+      "correggere i Markdown del secondo livello",
+      "rimuovere documenti superseded",
+      "creare History Index o Project Timeline",
+      "aprire pull request",
+      "creare nuovi commit",
+      "eseguire push",
+      "fare merge in main"
+    ]
+  },
+  "checkpoint": {
+    "id": "CHECKPOINT-DOC-AUDIT-0001",
+    "status": "COMMITTED_AND_PUSHED",
+    "branch": "review/documentation-audit-20260806",
+    "remote_branch": "origin/review/documentation-audit-20260806",
+    "commit_short_sha": "2f3c7f9",
+    "commit_full_sha": null,
+    "commit_full_sha_status": "NOT_RECORDED_IN_AVAILABLE_OUTPUT",
+    "subject": "docs(audit): add documentation correction plan v0.4",
+    "files": [
+      "Project_Integrity_OS_Piano_TODO_Correzione_Documentale.md",
+      "Project_Integrity_OS_Piano_TODO_Correzione_Documentale.json"
+    ],
+    "file_count": 2,
+    "remote_verified": true,
+    "pull_request_created": false,
+    "merge_to_main_performed": false,
+    "purpose": "Checkpoint di continuità e trasferimento del piano. Non costituisce approvazione del tree documentale, superamento dell’audit o autorizzazione al merge."
   }
 }
