@@ -6,7 +6,7 @@
   "language": "it-IT",
   "repository": "Pixelpro-agency/Integrity-OS",
   "local_branch": "review/documentation-audit-20260806",
-  "status": "ACTIVE_REDUCED_SCOPE",
+  "status": "COMPLETED_OPERATIONAL_SCOPE",
   "supersedes": {
     "report_id": "RPT-DOC-AUDIT-PLAN-0005",
     "version": "v0.5",
@@ -275,14 +275,16 @@
     },
     "optional_verification": {
       "id": "VERIFY-BASE-001",
-      "status": "OPTIONAL",
+      "status": "COMPLETED",
       "origin": "ACT-004",
       "purpose": "Confrontare, se ritenuto utile, i file non Markdown del commit base con il tree corrente per produrre una verifica supplementare di completezza. Non è un blocker del refactor già concluso.",
       "checklist": [
-        "[ ] Inventariare i file non Markdown del commit base.",
-        "[ ] Classificarli come presenti-identici, mancanti o differenti.",
-        "[ ] Non sovrascrivere automaticamente file differenti.",
-        "[ ] Produrre un report separato solo se il controllo viene eseguito."
+        "[x] Inventariato il file non Markdown del commit base.",
+        "[x] Classificato il vecchio percorso come apparentemente mancante.",
+        "[x] Individuato il file ricollocato nel tree corrente.",
+        "[x] Verificato blob identico 0ee1ce669b5e067954d39928c128eebaba4a377c.",
+        "[x] Verificato IDENTICO_BYTE_PER_BYTE.",
+        "[x] Nessun reintegro o sovrascrittura necessari."
       ]
     },
     "architecture_backlog": [
@@ -290,29 +292,43 @@
         "id": "ARCH-FOLLOWUP-001",
         "source": "ACT-025 / Q-003-C",
         "title": "Verificare PRIVATE_CHILD contro le decisioni DEC-0101 correnti",
-        "status": "OPEN_ARCHITECTURE_REVIEW",
+        "status": "RESOLVED_BY_EXISTING_DECISIONS",
         "checklist": [
-          "[ ] Verificare se PRIVATE_CHILD è già coperto dalle 20 DEC-0101.",
-          "[ ] Se non è coperto, aprire una decisione architetturale separata.",
-          "[ ] Non modificare i documenti tecnici come semplice pulizia documentale."
+          "[x] PRIVATE_CHILD già coperto dalle decisioni DEC-0101 correnti.",
+          "[x] Nessuna nuova decisione architetturale necessaria.",
+          "[x] Nessuna modifica tecnica introdotta come pulizia documentale."
         ]
       },
       {
         "id": "ARCH-FOLLOWUP-002",
         "source": "ACT-026 / Q-004-C",
         "title": "Verificare l'allowlist CLOSURE_REPORT contro le decisioni DEC-0101 correnti",
-        "status": "OPEN_ARCHITECTURE_REVIEW",
+        "status": "RESOLVED_AS_OPEN_ISSUE",
         "checklist": [
-          "[ ] Verificare se l'allowlist è già coperta dalle 20 DEC-0101.",
-          "[ ] Se non è coperta, aprire una decisione architetturale separata.",
-          "[ ] Non introdurre owner type o vincoli tecnici durante la sola correzione documentale."
-        ]
+          "[x] Owner canonici e allowlist logica già coperti dalle decisioni correnti.",
+          "[x] Gap residuo identificato nella governance/versionamento di report_owner_policies.",
+          "[x] Nessuna nuova DEC necessaria allo stato attuale.",
+          "[x] Registrato OI-0101-011 nell'Open Issues Register v0.1 DRAFT.",
+          "[x] PRIVATE_CHILD resta escluso dalla allowlist CLOSURE_REPORT corrente."
+        ],
+        "handoff": {
+          "open_issue_id": "OI-0101-011",
+          "title": "Report owner policy governance and versioning",
+          "status": "REGISTERED_OPEN",
+          "destinations": [
+            "Entity Catalog",
+            "Data Dictionary",
+            "Constraint Catalog",
+            "Implementation Wave Matrix"
+          ],
+          "physical_enforcement": "TODO-0102 se necessario"
+        }
       }
     ],
     "final_git_gate": {
       "id": "GATE-DOC-001",
       "source": "ACT-029",
-      "status": "READY_FOR_USER_AUTHORIZATION_CHECK",
+      "status": "AUTHORIZED_PENDING_FINAL_GIT_PRECHECK",
       "required_conditions": [
         "[x] docs/ contiene 41 cartelle e 147 file.",
         "[x] Audit documentale corrente: v0.3 FINAL.",
@@ -325,10 +341,31 @@
         "[x] Link storici non risolti documentati e non riscritti retroattivamente.",
         "[x] Nessuna modifica tecnica involontaria alle 20 decisioni DEC-0101.",
         "[x] Piano modifiche documentazione v0.4: COMPLETED.",
-        "[ ] Autorizzazione esplicita dell'utente a eseguire una nuova operazione Git."
+        "[x] Utente autorizza la fase Git manuale finale; il push sarà eseguito dall'utente sui comandi forniti."
       ],
-      "decision": "Il gate documentale è tecnicamente soddisfatto; resta intenzionalmente aperta solo l'autorizzazione esplicita dell'utente per qualsiasi commit/push/PR/merge."
-    }
+      "decision": "Il gate documentale è soddisfatto e l'utente ha autorizzato la fase Git manuale finale. Resta soltanto il final Git precheck prima di fornire i comandi di commit/push."
+    },
+    "post_v06_cycles": [
+      {
+        "cycle": 1,
+        "checkpoint": "COMPLETED_5_OF_5",
+        "points": [
+          "VERIFY-BASE-001",
+          "ARCH-FOLLOWUP-001 / PRIVATE_CHILD",
+          "ARCH-FOLLOWUP-002 / verifica copertura",
+          "classificazione gap CLOSURE_REPORT",
+          "destinazione open issue"
+        ]
+      },
+      {
+        "cycle": 2,
+        "checkpoint": "COMPLETED_1_OF_5_SCOPE_EXHAUSTED",
+        "points": [
+          "Registrazione formale OI-0101-011"
+        ],
+        "reason_closed_early": "Nessun altro punto operativo residuo nella v0.6."
+      }
+    ]
   },
   "explicitly_not_to_create": [
     "Project_Integrity_OS_Document_Registry_v0_8.md",
@@ -340,9 +377,16 @@
   "closure": {
     "legacy_plan_v0_5_status": "SUPERSEDED",
     "documentation_refactor_status": "COMPLETED",
+    "v0_6_operational_scope_status": "COMPLETED",
     "remaining_documentation_blockers": 0,
-    "remaining_architecture_followups": 2,
-    "remaining_git_gate": "USER_AUTHORIZATION_ONLY",
-    "next_step": "Non eseguire altre correzioni documentali strutturali. Valutare separatamente ARCH-FOLLOWUP-001 e ARCH-FOLLOWUP-002 durante il lavoro architetturale TODO-0101. Qualsiasi operazione Git richiede autorizzazione esplicita."
-  }
+    "remaining_architecture_followups_to_review": 0,
+    "open_issue_registered": {
+      "id": "OI-0101-011",
+      "status": "OPEN"
+    },
+    "remaining_operational_points_in_v0_6": 0,
+    "git_gate": "AUTHORIZED_PENDING_FINAL_GIT_PRECHECK",
+    "next_step": "Eseguire il final Git precheck; quindi fornire all'utente i comandi per commit/push manuale. Dopo il push, TODO-0101 riprende da Schema Architecture."
+  },
+  "updated_at": "2026-08-07T03:16:00+02:00"
 }

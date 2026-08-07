@@ -56,13 +56,13 @@
 Decisioni di analisi: CONSOLIDATE
 Correction Set: APPLIED
 Integrazione in main: OBSERVED
-Baseline documentale corrente: RIALLINEAMENTO IN CORSO
+Baseline documentale corrente: RIALLINEAMENTO COMPLETATO
 Schema Architecture: NOT PRODUCED
 Schema fisico autorevole: NOT APPROVED
 Implementazione SQLite: BLOCKED
 ```
 
-Il refactor documentale successivo a TODO-0101 non modifica le decisioni `DEC-0101-001` → `DEC-0101-020`. Questo checkpoint riallinea la navigazione al Decision Log Data Model v0.9 e all’Audit documentale v0.2, registrando lo stato documentale corrente senza riaprire le decisioni consolidate.
+Il refactor documentale successivo a TODO-0101 non modifica le decisioni `DEC-0101-001` → `DEC-0101-020`. Questo checkpoint riallinea la navigazione al Decision Log Data Model v0.9 e all’Audit documentale v0.3, registrando lo stato documentale corrente senza riaprire le decisioni consolidate.
 
 ---
 

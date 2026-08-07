@@ -11,7 +11,7 @@
 # 1. Inventario
 
 ```text
-File totali sotto docs/: 148
+File totali sotto docs/: 147
 File Markdown: 113
 File .original.txt: 0
 ```
