@@ -1,0 +1,41 @@
+{
+  "task": "TODO-0010",
+  "audit": "TODO-0101_Audit_Documentale_v0_2_FINAL.md",
+  "scope": "docs/",
+  "metrics": {
+    "total_files": 132,
+    "markdown": 105,
+    "ext_counts": {
+      ".md": 105,
+      ".py": 1,
+      ".csv": 3,
+      ".txt": 11,
+      ".json": 5,
+      ".sh": 7
+    },
+    "integrity": {
+      "empty": 0,
+      "invalid_utf8": 0,
+      "nul": 0,
+      "conflicts": 0,
+      "unbalanced_fences": 0
+    },
+    "total_links": 166,
+    "broken_total": 124,
+    "broken_current": 0,
+    "broken_historical": 124,
+    "broken_by_file": {
+      "10-executions/TODO-0101/90-history/checkpoints/TODO-0101_Checkpoint_Analisi_v0_6_DRAFT.md": 18,
+      "10-executions/TODO-0101/90-history/checkpoints/TODO-0101_Checkpoint_Analisi_v0_7_DRAFT.md": 19,
+      "10-executions/TODO-0101/90-history/checkpoints/TODO-0101_Checkpoint_Finale_Analisi_v0_10_DRAFT.md": 22,
+      "10-executions/TODO-0101/90-history/checkpoints/TODO-0101_Checkpoint_Finale_Analisi_v0_8_DRAFT.md": 19,
+      "10-executions/TODO-0101/90-history/checkpoints/TODO-0101_Checkpoint_Finale_Analisi_v0_9_DRAFT.md": 22,
+      "10-executions/TODO-0101/90-history/original-index/README_ORIGINALE.md": 21,
+      "architecture/data-model/history/decision-log/Project_Integrity_OS_Decision_Log_Data_Model_v0_6_DRAFT.md": 2,
+      "architecture/data-model/history/decision-log/Project_Integrity_OS_Decision_Log_Data_Model_v0_8_DRAFT.md": 1
+    },
+    "original_txt": 0
+  },
+  "current_broken_links": [],
+  "historical_broken_link_count": 124
+}

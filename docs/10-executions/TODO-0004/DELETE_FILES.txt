@@ -1,0 +1,4 @@
+docs/00-current/Project_Integrity_OS_Concetto_Integrita_Continuita_v0_6_SUPERSEDED.md
+docs/00-current/Project_Integrity_OS_Document_Registry_v0_6.md
+docs/00-current/Project_Integrity_OS_Document_Registry_v0_7.md
+docs/00-current/Project_Integrity_OS_TODO_MVP_v0_8.md

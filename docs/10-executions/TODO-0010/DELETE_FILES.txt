@@ -1,0 +1,2 @@
+docs/10-executions/TODO-0101/03-verifica-documentale/TODO-0101_Audit_Documentale_v0_1_FINAL.md
+docs/10-executions/TODO-0101/02-checkpoint/TODO-0101_Checkpoint_Finale_Analisi_v0_10_DRAFT.md

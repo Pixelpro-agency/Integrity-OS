@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "package_id": "TODO-0002-ORGANIZED",
+  "source_archive": "TODO-0002.zip",
+  "task": {
+    "task_id": "TODO-0002",
+    "title": "Creare la struttura iniziale del repository Project Integrity OS",
+    "execution_mode": "BROWSER_OPERATOR_ASSISTED",
+    "final_status": "DONE",
+    "verification_outcome": "PASSED",
+    "human_approval": "APPROVED",
+    "accepted_deviations": [
+      "DEV-TODO-0002-001"
+    ],
+    "push_authorized": false
+  },
+  "integrity": {
+    "source_document_count": 13,
+    "content_modified": false,
+    "organization_only": true,
+    "hash_algorithm": "SHA-256"
+  },
+  "files": [
+    {
+      "order": 1,
+      "original": "superseded/Project_Integrity_OS_Brief_TODO-0002_v0_2_SUPERSEDED.md",
+      "organized": "01-esecuzione-effettiva/TODO-0002_01_Brief_Esecuzione_v0_2_USED_THEN_SUPERSEDED.md",
+      "role": "brief_esecuzione",
+      "status": "USED_THEN_SUPERSEDED",
+      "actually_used": true,
+      "safe_to_execute": null,
+      "note": "Brief v0.2 realmente utilizzato durante l’esecuzione; successivamente sostituito dal brief finale v0.3.",
+      "sha256": "44ec3db515fdb1197f119924517b2c9c418a5c1dad29a0ec5efe8bd1654e3dd1",
+      "size_bytes": 20541
+    },
+    {
+      "order": 2,
+      "original": "instructions/Project_Integrity_OS_Prompt_Esecutivo_Browser_TODO-0002_v0_1_FINAL.md",
+      "organized": "01-esecuzione-effettiva/TODO-0002_02_Prompt_Browser_Operatore_v0_1_USED.md",
+      "role": "prompt_esecutivo",
+      "status": "USED",
+      "actually_used": true,
+      "safe_to_execute": false,
+      "note": "Prompt realmente utilizzato in modalità BROWSER_OPERATOR_ASSISTED; conservare come storico, non riutilizzare automaticamente.",
+      "sha256": "b0b4693f2d1247f60e83079cd5a59cd36f8975f8b5ad9d72bcbfb879befaada1",
+      "size_bytes": 9222
+    },
+    {
+      "order": 3,
+      "original": "instructions/Project_Integrity_OS_Start_Here_Browser_TODO-0002_v0_1_FINAL.md",
+      "organized": "01-esecuzione-effettiva/TODO-0002_03_Start_Here_Browser_Operatore_v0_1_USED.md",
+      "role": "start_here_esecuzione",
+      "status": "USED",
+      "actually_used": true,
+      "safe_to_execute": false,
+      "note": "Procedura di avvio della sessione browser realmente utilizzata.",
+      "sha256": "9851d81d155012df71bd44aa89cfe98b6b988a1e246411ce9e73c52c737b7fa2",
+      "size_bytes": 1397
+    },
+    {
+      "order": 4,
+      "original": "reports/Project_Integrity_OS_Report_Esecutivo_TODO-0002_v0_1.md",
+      "organized": "02-risultati-e-verifica/TODO-0002_04_Report_Esecutore_v0_1_FINAL.md",
+      "role": "report_esecutore",
+      "status": "FINAL",
+      "actually_used": true,
+      "safe_to_execute": null,
+      "note": "Dichiarazione finale dell’esecutore; non equivale da sola a prova o chiusura.",
+      "sha256": "0090a42cea9e5683bbf6a400e7d6f63086896d0672ed9a6369d18f1ea9b24aec",
+      "size_bytes": 6963
+    },
+    {
+      "order": 5,
+      "original": "reports/Project_Integrity_OS_Verifica_Indipendente_TODO-0002_v0_1.md",
+      "organized": "02-risultati-e-verifica/TODO-0002_05_Verifica_Indipendente_v0_1_PASSED.md",
+      "role": "verifica_indipendente",
+      "status": "PASSED",
+      "actually_used": true,
+      "safe_to_execute": null,
+      "note": "Verifica tecnica, documentale e di coerenza conclusa con esito SUPERATA.",
+      "sha256": "6f694e476d9848b8af614e18af984f5c87e1d9d3ad0a12ce822a25bf5ee44b05",
+      "size_bytes": 4901
+    },
+    {
+      "order": 6,
+      "original": "validation/approvals/Project_Integrity_OS_Approvazione_Umana_TODO-0002_v0_1.md",
+      "organized": "03-validazione-umana/TODO-0002_06_Approvazione_Umana_v0_1_APPROVED.md",
+      "role": "approvazione_umana",
+      "status": "APPROVED",
+      "actually_used": true,
+      "safe_to_execute": null,
+      "note": "Approvazione umana della chiusura; autorizza commit baseline locale e vieta il push.",
+      "sha256": "3d2e655fdeb6d20f8c3e31bc2648cfcae8e96e91b3d540eeb305b5ad7839b4a8",
+      "size_bytes": 953
+    },
+    {
+      "order": 7,
+      "original": "validation/exceptions/Project_Integrity_OS_Deviazione_DEV-TODO-0002-001_v0_1.md",
+      "organized": "03-validazione-umana/TODO-0002_07_Deviazione_DEV-TODO-0002-001_v0_1_ACCEPTED.md",
+      "role": "deviazione",
+      "status": "ACCEPTED",
+      "actually_used": true,
+      "safe_to_execute": null,
+      "note": "Deviazione procedurale accettata: build installer temporanea, successivamente rimossa.",
+      "sha256": "1b354abb5d75e01bf87e291ede8f81e5c19db8cf4a44fd7633a40a9569d3b8e5",
+      "size_bytes": 923
+    },
+    {
+      "order": 8,
+      "original": "instructions/Project_Integrity_OS_Brief_TODO-0002_v0_3_FINAL.md",
+      "organized": "04-chiusura-documentale/TODO-0002_08_Brief_Finale_Chiusura_v0_3_FINAL.md",
+      "role": "brief_finale_chiusura",
+      "status": "FINAL",
+      "actually_used": false,
+      "safe_to_execute": false,
+      "note": "Versione finale archiviata prodotta in chiusura; non è il brief usato durante l’esecuzione.",
+      "sha256": "263d54c7f058b687087f3ab1ad975af57de564bc2844294efc61c65f38263491",
+      "size_bytes": 20993
+    },
+    {
+      "order": 9,
+      "original": "instructions/closure/Project_Integrity_OS_Start_Here_Chiusura_TODO-0002_v0_1_EXECUTED.md",
+      "organized": "04-chiusura-documentale/TODO-0002_09_Runbook_Chiusura_v0_1_EXECUTED.md",
+      "role": "runbook_chiusura",
+      "status": "EXECUTED",
+      "actually_used": true,
+      "safe_to_execute": false,
+      "note": "Istruzioni già eseguite. Il testo cita close_todo_0002.py, mentre il file storico conservato ha un nome differente.",
+      "sha256": "19ec0e0b5737b3c28ab9bb4dd7d38b8b523d4f021cce4d3cc0b2cb467f744e96",
+      "size_bytes": 862
+    },
+    {
+      "order": 10,
+      "original": "instructions/closure/Project_Integrity_OS_Chiusura_TODO-0002_v0_1_EXECUTED.py",
+      "organized": "04-chiusura-documentale/TODO-0002_10_Script_Chiusura_v0_1_EXECUTED_DO_NOT_RERUN.py",
+      "role": "script_chiusura",
+      "status": "EXECUTED",
+      "actually_used": true,
+      "safe_to_execute": false,
+      "note": "Script storico già eseguito, con percorsi e condizioni legati al contesto originario. Non rieseguire.",
+      "sha256": "983ffcd98ac851a439ca72be1bb48c933acff2e10129b564babe49267d83121f",
+      "size_bytes": 27298
+    },
+    {
+      "order": 91,
+      "original": "superseded/Project_Integrity_OS_Brief_TODO-0002_v0_1_SUPERSEDED.md",
+      "organized": "90-storico-non-utilizzato/TODO-0002_91_Brief_Iniziale_v0_1_SUPERSEDED.md",
+      "role": "brief_precedente",
+      "status": "SUPERSEDED",
+      "actually_used": false,
+      "safe_to_execute": false,
+      "note": "Prima versione del brief, sostituita prima dell’esecuzione effettiva.",
+      "sha256": "13f5fd8a5ab5b365fb6b9e77fd36dbb6141ab2a605abd21804358bdd205d5488",
+      "size_bytes": 7137
+    },
+    {
+      "order": 92,
+      "original": "superseded/Project_Integrity_OS_Prompt_Esecutivo_Desktop_TODO-0002_v0_1_SUPERSEDED.md",
+      "organized": "90-storico-non-utilizzato/TODO-0002_92_Prompt_Desktop_v0_1_NOT_USED_SUPERSEDED.md",
+      "role": "prompt_desktop_precedente",
+      "status": "NOT_USED_SUPERSEDED",
+      "actually_used": false,
+      "safe_to_execute": false,
+      "note": "Variante desktop/local abbandonata a favore della modalità browser con operatore.",
+      "sha256": "d8ec66df62ee99e27905dec7b9240fe37fdda6faf45a07eceb3d04a525de3f05",
+      "size_bytes": 2371
+    },
+    {
+      "order": 93,
+      "original": "superseded/Project_Integrity_OS_Start_Here_Desktop_TODO-0002_v0_1_SUPERSEDED.md",
+      "organized": "90-storico-non-utilizzato/TODO-0002_93_Start_Here_Desktop_v0_1_NOT_USED_SUPERSEDED.md",
+      "role": "start_here_desktop_precedente",
+      "status": "NOT_USED_SUPERSEDED",
+      "actually_used": false,
+      "safe_to_execute": false,
+      "note": "Procedura desktop non utilizzata.",
+      "sha256": "ed50187b65569ac15edb3a81c31b63493fe943460462d239dd2ba98fcfc39f83",
+      "size_bytes": 888
+    }
+  ]
+}

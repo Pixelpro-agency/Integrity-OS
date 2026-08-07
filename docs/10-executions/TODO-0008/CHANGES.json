@@ -1,0 +1,161 @@
+{
+  "task": "TODO-0008",
+  "status": "PREPARED",
+  "change_type": "PATH_METADATA_ONLY",
+  "technical_content_changed": false,
+  "documents": [
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_01_Principi_Tracciabilita_Contesto_v0_2_DRAFT.md",
+      "source_sha256": "78b6b5a5a9dd100ce3f68ead9004c3121d24bab8fa9d68c83008c68effbeb093",
+      "current_sha256": "9842a92ff39c840825ce22ed1677ebc647ea83ae4bb11465c04ecef96f1c0713",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_01_Principi_Tracciabilita_Contesto_TODO-0101_v0_1_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_01_Principi_Tracciabilita_Contesto_v0_1_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_02_Modello_Gerarchico_Contesto_v0_2_DRAFT.md",
+      "source_sha256": "84eca709a58628edd3b5c7bb3dea9672359c53215b924c41d5aeb4360a41600c",
+      "current_sha256": "c9f6d11cfb5d929f20aed4fca4b2daa39c977bef047c41e001a66adbcae705b3",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_02_Modello_Gerarchico_Contesto_TODO-0101_v0_1_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_02_Modello_Gerarchico_Contesto_v0_1_DRAFT.md",
+      "additional_reference_change": {
+        "from": "Project_Integrity_OS_13_Transizioni_Condizioni_Complete_TODO-0101_v0_2_DRAFT.md",
+        "to": "Project_Integrity_OS_13_Transizioni_Condizioni_Complete_v0_2_DRAFT.md"
+      },
+      "changed_lines": 2
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_03_Context_Package_v0_2_DRAFT.md",
+      "source_sha256": "4fa784f5a6efe5945ea5eb92433dce4d1058d3b377573cfa5f4930554351da45",
+      "current_sha256": "01637b1be938d914e23a00e15724f8eb311ef045384953cf7b9e8921ff37f757",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_03_Context_Package_TODO-0101_v0_1_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_03_Context_Package_v0_1_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_04_Provenienza_Informazioni_v0_2_DRAFT.md",
+      "source_sha256": "98cd1e0f6411fe4c362c74bfe5fc4b070ea934e43a85660a437390b0646dd359",
+      "current_sha256": "9c7e5bd24d5c10258685d1788584d2690ccc9f3de2d8935148fea2c781b01a52",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_04_Provenienza_Informazioni_TODO-0101_v0_1_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_04_Provenienza_Informazioni_v0_1_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_05_Sintesi_Drill_Down_v0_2_DRAFT.md",
+      "source_sha256": "56d488f6bbdb45e305bb36099f342451510a902cc0c0e3562009e5400838e822",
+      "current_sha256": "e474dccc73150efb9bef81575ad1b0213601082b2faa776e3ac97b95f4a07f8e",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_05_Sintesi_Drill_Down_TODO-0101_v0_1_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_05_Sintesi_Drill_Down_v0_1_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_06_Requisiti_Test_Tracciabilita_v0_2_DRAFT.md",
+      "source_sha256": "19b466ba0a9b85d2a8a9b17f25de266f40abef4941b8d8d6f29d2d96b56b9cb1",
+      "current_sha256": "d12a152dc9ff21002bbc66c0177600d0e207fb0f7453583671dd8682e8c3d2ed",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_06_Requisiti_Test_Tracciabilita_TODO-0101_v0_1_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_06_Requisiti_Test_Tracciabilita_v0_1_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_07_Lifecycle_Decisioni_v0_2_DRAFT.md",
+      "source_sha256": "9d74e908af9050a52d96d0fefc747f6e738441017d1d064c56b92ce58dbdcf9f",
+      "current_sha256": "ed5071b099977a54cfbff8eaecb3c61a69becaa8fb24838772bf75984b92a04e",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_07_Lifecycle_Decisioni_TODO-0101_v0_1_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_07_Lifecycle_Decisioni_v0_1_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_08_Registro_Elementi_Irrisolti_v0_3_DRAFT.md",
+      "source_sha256": "702082ed8caafa30c185709be440dc2827ca1432fd86aa81fb1586090e83f531",
+      "current_sha256": "c184afcf2bff5a21464539f6dc0be0cc9260741e37b3352938504dc961ec67c7",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_08_Registro_Elementi_Irrisolti_TODO-0101_v0_2_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_08_Registro_Elementi_Irrisolti_v0_2_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_09_Eventi_Ricostruzione_Temporale_v0_2_DRAFT.md",
+      "source_sha256": "e04a7732e55f81e8031011a2686a552cc1445e6cd08ee8d71aba8ad4e682f6b9",
+      "current_sha256": "9d737059e2dc194a40d9610bb465133870c1fbb32b88f01c934bcbc7065ab58f",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_09_Eventi_Ricostruzione_Temporale_TODO-0101_v0_1_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_09_Eventi_Ricostruzione_Temporale_v0_1_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_10_Integrita_Trasversale_Anti_Orfano_v0_3_DRAFT.md",
+      "source_sha256": "0933d064a900ec7a0232b4db8c04777c646a69d85c2a0cebc0d6dca217d5a650",
+      "current_sha256": "2c70b63ef8b6304891aec7d67bfebfdfbe86866f289b02cc7cb19288ceed7352",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_10_Integrita_Trasversale_Anti_Orfano_TODO-0101_v0_2_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_10_Integrita_Trasversale_Anti_Orfano_v0_2_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_11_Conservazione_Rettifiche_Cancellazione_v0_2_DRAFT.md",
+      "source_sha256": "b7132a0b1264accd744edfbe0725df01ea6d4ddd80497ef191cb75b1f1f052df",
+      "current_sha256": "0d01bff8773971a7d4f2b2037b100000730492ffea2e14807ebafed27e54facc",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_11_Conservazione_Rettifiche_Cancellazione_TODO-0101_v0_1_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_11_Conservazione_Rettifiche_Cancellazione_v0_1_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_12_Ruoli_Permessi_Sensibilita_Redazione_v0_3_DRAFT.md",
+      "source_sha256": "0c02d592c5956e068fb02164ba34cba30b86514a1b2d140197cc28beac3bc6e2",
+      "current_sha256": "4013957c893600e0bb6cd1329a066e9a958a5d3e939d7e859a6856a6a52d0504",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_12_Ruoli_Permessi_Sensibilita_Redazione_TODO-0101_v0_2_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_12_Ruoli_Permessi_Sensibilita_Redazione_v0_2_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_13_Transizioni_Condizioni_Complete_v0_2_DRAFT.md",
+      "source_sha256": "02e4d54d912159e31c95077d7dcb416dc1752c10c9f638d21f76599718045c15",
+      "current_sha256": "7628580a99b2562bde70a750bdc0ad2fe46adc3bb976896de42e15c427dedd4b",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_13_Transizioni_Condizioni_Complete_TODO-0101_v0_1_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_13_Transizioni_Condizioni_Complete_v0_1_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_14_Cardinalita_Tabelle_Associative_v0_3_DRAFT.md",
+      "source_sha256": "483502fb4f70ad3c1ddda96a2fa1171ee336dfb8af1516e3e241834c35535a01",
+      "current_sha256": "709e4fedbb21c1766efeabc47b5ed3f46c5b3c7da1991eadfb1711acd52fa205",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_14_Cardinalita_Tabelle_Associative_TODO-0101_v0_2_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_14_Cardinalita_Tabelle_Associative_v0_2_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    },
+    {
+      "file": "docs/architecture/data-model/current/Project_Integrity_OS_15_Schema_Completo_Implementazione_Progressiva_v0_3_DRAFT.md",
+      "source_sha256": "02ee32e929a7700ce684c822a19efee4de0862a736c3909718e85faf34fc5c12",
+      "current_sha256": "fdd6921cea9ac2fd4c9cfd7886c38285ac789b9cad7889c63e889f0016b5387c",
+      "change_type": "PATH_METADATA_ONLY",
+      "sostituisce_from": "Project_Integrity_OS_15_Schema_Completo_Implementazione_Progressiva_TODO-0101_v0_2_DRAFT.md",
+      "sostituisce_to": "../history/decisions/Project_Integrity_OS_15_Schema_Completo_Implementazione_Progressiva_v0_2_DRAFT.md",
+      "additional_reference_change": null,
+      "changed_lines": 1
+    }
+  ]
+}

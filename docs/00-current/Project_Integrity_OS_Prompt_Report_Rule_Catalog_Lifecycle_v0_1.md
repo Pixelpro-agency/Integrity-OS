@@ -2,9 +2,10 @@
 ## Prompt Schema v1, Report Schema v1, Rule Catalog v1 e Lifecycle dei Tentativi
 
 **Versione:** 0.1
-**Stato:** APPROVED — baseline vincolante per TODO-0003
+**Stato:** ACTIVE — baseline operativa MVP
 **Data:** 2026-08-05
-**Scopo:** definire la baseline operativa necessaria prima dell'avvio di `TODO-0003 — Definire convenzioni tecniche e qualità`.
+**Task di origine:** `TODO-0003 — Definire convenzioni tecniche e qualità`
+**Scopo:** definire la baseline operativa per configurare le regole delle task, generare prompt e report collegati ai tentativi, raccogliere evidenze, verificare gli esiti e prepararne la futura persistenza.
 
 ---
 

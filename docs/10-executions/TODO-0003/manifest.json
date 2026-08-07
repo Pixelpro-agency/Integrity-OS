@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "package_type": "ORGANIZED_TASK_ARCHIVE",
+  "package_name": "TODO-0003_ORGANIZZATO",
+  "generated_at": "2026-08-06T18:01:33.711368+00:00",
+  "source_archive": {
+    "name": "TODO-0003.zip",
+    "sha256": "2356519e2fe854a8d0293dba53f1cdd2af2b3bdf705a0b70b58e267d3676a134"
+  },
+  "preservation_policy": {
+    "historical_files_byte_identical": true,
+    "historical_content_rewritten": false,
+    "changes_applied": [
+      "cartelle organizzate per fase del lifecycle",
+      "nomi normalizzati secondo la funzione reale",
+      "README operativo aggiunto",
+      "mappa file CSV aggiunta",
+      "manifesto JSON aggiunto",
+      "checksum SHA-256 aggiunti"
+    ],
+    "reason_not_rewritten": "La nota post-chiusura stabilisce che prompt e report originali non devono essere riscritti retroattivamente; la stessa tutela è stata applicata a tutti gli artefatti autentici della task."
+  },
+  "task": {
+    "task_id": "TODO-0003",
+    "title": "Definire convenzioni tecniche e qualità",
+    "final_status": "DONE",
+    "execution_mode": "BROWSER_OPERATOR_ASSISTED",
+    "attempts_used": 1,
+    "executor_declared_outcome": "SUCCESS",
+    "independent_verification_outcome": "PASSED",
+    "human_approval": "APPROVED",
+    "local_commit_authorized": true,
+    "assistant_push_authorized": false,
+    "user_push_later_observed": true,
+    "closing_commit_sha": "e33bab77c5032c0aefdbf18fb2cde1afd2a5ea9d",
+    "post_closure_documentation_status": "COMPLETED",
+    "code_changed_during_post_closure_correction": false
+  },
+  "reading_order": [
+    "01-esecuzione-effettiva/TODO-0003_Prompt_Browser_Operatore_v0_1_USED.md",
+    "02-risultato-esecutore/TODO-0003_Report_Esecutore_v0_1_RAW_FINAL.md",
+    "03-verifica-indipendente/TODO-0003_Verifica_Indipendente_v0_1_PASSED.md",
+    "04-approvazione-umana/TODO-0003_Approvazione_Umana_v0_1_APPROVED.md",
+    "05-post-chiusura/TODO-0003_Correzione_Documentale_Post_Chiusura_v0_1_FINAL.md"
+  ],
+  "files": [
+    {
+      "order": 1,
+      "original_path": "instructions/Project_Integrity_OS_Prompt_Esecutivo_Browser_TODO-0003_v0_1.md",
+      "normalized_path": "01-esecuzione-effettiva/TODO-0003_Prompt_Browser_Operatore_v0_1_USED.md",
+      "original_name": "Project_Integrity_OS_Prompt_Esecutivo_Browser_TODO-0003_v0_1.md",
+      "normalized_name": "TODO-0003_Prompt_Browser_Operatore_v0_1_USED.md",
+      "document_role": "EXECUTION_PROMPT",
+      "lifecycle_status": "USED_HISTORICAL",
+      "actually_used": true,
+      "authoritative_for": "istruzioni realmente consegnate durante il tentativo",
+      "safe_to_execute_again": false,
+      "safe_to_reuse_as_template": false,
+      "historical_content_sha256": "e4bab1aac845308775ea024fe94c5f9ef7ce2664ffe4fc1b32f7676c8334ca90",
+      "organized_copy_sha256": "e4bab1aac845308775ea024fe94c5f9ef7ce2664ffe4fc1b32f7676c8334ca90",
+      "byte_identical_to_original": true,
+      "notes": "Artefatto autentico. Contiene precondizioni storiche e riferimenti a baseline oggi superate; non rieseguire né usare direttamente come modello futuro."
+    },
+    {
+      "order": 2,
+      "original_path": "reports/Project_Integrity_OS_Report_Esecutivo_TODO-0003_v0_1.md",
+      "normalized_path": "02-risultato-esecutore/TODO-0003_Report_Esecutore_v0_1_RAW_FINAL.md",
+      "original_name": "Project_Integrity_OS_Report_Esecutivo_TODO-0003_v0_1.md",
+      "normalized_name": "TODO-0003_Report_Esecutore_v0_1_RAW_FINAL.md",
+      "document_role": "EXECUTOR_REPORT",
+      "lifecycle_status": "RAW_FINAL",
+      "actually_used": true,
+      "authoritative_for": "dichiarazioni originali dell’esecutore a fine tentativo",
+      "safe_to_execute_again": false,
+      "safe_to_reuse_as_template": false,
+      "historical_content_sha256": "b490d89fbff01d13f68911af324591da423cb586bab58a998b29e7a7d71ae24b",
+      "organized_copy_sha256": "b490d89fbff01d13f68911af324591da423cb586bab58a998b29e7a7d71ae24b",
+      "byte_identical_to_original": true,
+      "notes": "Report originale/raw. SUCCESS non equivale a task DONE e non sostituisce verifica o approvazione."
+    },
+    {
+      "order": 3,
+      "original_path": "reports/Project_Integrity_OS_Verifica_Indipendente_TODO-0003_v0_1.md",
+      "normalized_path": "03-verifica-indipendente/TODO-0003_Verifica_Indipendente_v0_1_PASSED.md",
+      "original_name": "Project_Integrity_OS_Verifica_Indipendente_TODO-0003_v0_1.md",
+      "normalized_name": "TODO-0003_Verifica_Indipendente_v0_1_PASSED.md",
+      "document_role": "INDEPENDENT_VERIFICATION",
+      "lifecycle_status": "PASSED",
+      "actually_used": true,
+      "authoritative_for": "controlli tecnici osservati ed esito della verifica indipendente",
+      "safe_to_execute_again": false,
+      "safe_to_reuse_as_template": false,
+      "historical_content_sha256": "bac574d66d27833f483c1f71467160f00c7a5dbf49424bd77ca0f7414ec3dad8",
+      "organized_copy_sha256": "bac574d66d27833f483c1f71467160f00c7a5dbf49424bd77ca0f7414ec3dad8",
+      "byte_identical_to_original": true,
+      "notes": "Conferma tecnica distinta dal report dell’esecutore. Raccomandazione: READY_FOR_HUMAN_REVIEW."
+    },
+    {
+      "order": 4,
+      "original_path": "validation/approvals/Project_Integrity_OS_Approvazione_Umana_TODO-0003_v0_1.md",
+      "normalized_path": "04-approvazione-umana/TODO-0003_Approvazione_Umana_v0_1_APPROVED.md",
+      "original_name": "Project_Integrity_OS_Approvazione_Umana_TODO-0003_v0_1.md",
+      "normalized_name": "TODO-0003_Approvazione_Umana_v0_1_APPROVED.md",
+      "document_role": "HUMAN_APPROVAL",
+      "lifecycle_status": "APPROVED",
+      "actually_used": true,
+      "authoritative_for": "autorizzazione umana alla chiusura e al commit locale",
+      "safe_to_execute_again": false,
+      "safe_to_reuse_as_template": false,
+      "historical_content_sha256": "69ddf2ac19153259356670c6a0abb4f8cc5a54c26382135886b32551155dd748",
+      "organized_copy_sha256": "69ddf2ac19153259356670c6a0abb4f8cc5a54c26382135886b32551155dd748",
+      "byte_identical_to_original": true,
+      "notes": "Autorizza commit locale; non autorizza il push eseguito dall’assistente."
+    },
+    {
+      "order": 5,
+      "original_path": "validation/notes/Project_Integrity_OS_Nota_Post_Chiusura_TODO-0003_v0_1.md",
+      "normalized_path": "05-post-chiusura/TODO-0003_Correzione_Documentale_Post_Chiusura_v0_1_FINAL.md",
+      "original_name": "Project_Integrity_OS_Nota_Post_Chiusura_TODO-0003_v0_1.md",
+      "normalized_name": "TODO-0003_Correzione_Documentale_Post_Chiusura_v0_1_FINAL.md",
+      "document_role": "POST_CLOSURE_DOCUMENTATION_CORRECTION",
+      "lifecycle_status": "FINAL",
+      "actually_used": true,
+      "authoritative_for": "interpretazione finale della chiusura e correzioni documentali successive",
+      "safe_to_execute_again": false,
+      "safe_to_reuse_as_template": false,
+      "historical_content_sha256": "e8ee47b9fdd30c823cd306923e9e9c0f5a205af296148f187b9b57aad5a69790",
+      "organized_copy_sha256": "e8ee47b9fdd30c823cd306923e9e9c0f5a205af296148f187b9b57aad5a69790",
+      "byte_identical_to_original": true,
+      "notes": "Lettura obbligatoria. Non riapre la task e non modifica il codice; chiarisce naming, standard report, natura raw del report e distinzione tra autorizzazione ed esecuzione del push."
+    }
+  ],
+  "external_references": [
+    {
+      "name": "Project_Integrity_OS_Convenzioni_Tecniche_v0_1.md",
+      "relationship": "baseline prodotta durante TODO-0003; successivamente archiviata"
+    },
+    {
+      "name": "Project_Integrity_OS_Convenzioni_Tecniche_v0_2.md",
+      "relationship": "baseline tecnica corrente dopo correzione post-chiusura"
+    },
+    {
+      "name": "Project_Integrity_OS_Standard_Report_Sviluppo_v0_1.md",
+      "relationship": "standard prodotto durante TODO-0003; successivamente archiviato"
+    },
+    {
+      "name": "Project_Integrity_OS_Standard_Report_Sviluppo_v0_2.md",
+      "relationship": "standard report corrente dopo correzione post-chiusura"
+    },
+    {
+      "name": "Project_Integrity_OS_TODO_MVP_v0_7.md",
+      "relationship": "To-Do precedente alla correzione post-chiusura"
+    },
+    {
+      "name": "Project_Integrity_OS_TODO_MVP_v0_8.md",
+      "relationship": "To-Do aggiornata con commit e presenza remota osservata"
+    },
+    {
+      "name": "Project_Integrity_OS_Document_Registry_v0_5.md",
+      "relationship": "registro precedente alla correzione post-chiusura"
+    },
+    {
+      "name": "Project_Integrity_OS_Document_Registry_v0_6.md",
+      "relationship": "registro aggiornato dopo la correzione post-chiusura"
+    }
+  ]
+}

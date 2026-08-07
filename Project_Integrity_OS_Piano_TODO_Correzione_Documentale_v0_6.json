@@ -1,0 +1,348 @@
+{
+  "report_id": "RPT-DOC-AUDIT-PLAN-0006",
+  "title": "Project Integrity OS — Piano TODO di correzione documentale riallineato al refactor concluso — v0.6",
+  "version": "v0.6",
+  "created_at": "2026-08-07T02:33:00+02:00",
+  "language": "it-IT",
+  "repository": "Pixelpro-agency/Integrity-OS",
+  "local_branch": "review/documentation-audit-20260806",
+  "status": "ACTIVE_REDUCED_SCOPE",
+  "supersedes": {
+    "report_id": "RPT-DOC-AUDIT-PLAN-0005",
+    "version": "v0.5",
+    "reason": "La v0.5 era costruita su una strategia documentale successivamente sostituita: Document Registry v0.8, docs/20-history, History Index, Project Timeline, Git come archivio storico quasi esclusivo e Prompt/Report Rule Catalog Lifecycle v0.2. Il refactor effettivamente applicato ha adottato invece docs/README.md, 90-history, manifesti locali, conservazione degli artefatti autentici e Prompt/Report v0.1 attivo."
+  },
+  "authoritative_completed_plan": {
+    "title": "Project Integrity OS — Piano modifiche documentazione v0.4",
+    "status": "COMPLETED",
+    "final_tree": {
+      "directories": 41,
+      "files": 147,
+      "markdown_files": 113,
+      "markdown_links_examined": 189,
+      "broken_current_links": 0,
+      "broken_historical_links": 146,
+      "original_txt_files": 0
+    },
+    "current_state": {
+      "todo_current": "v0.10",
+      "todo_0101_status": "IN_ANALYSIS",
+      "todo_0101_ready": false,
+      "checkpoint_current": "v0.12",
+      "decision_log_current": "v0.9",
+      "documentation_audit_current": "v0.3 FINAL",
+      "sqlite_started": false,
+      "file_map_rows": 66,
+      "file_map_source_rows": 57,
+      "file_map_generated_rows": 9,
+      "manifest_schema": "2.1"
+    }
+  },
+  "final_documentation_decisions": [
+    {
+      "id": "DEC-DOC-001",
+      "decision": "Eliminare Document Registry v0.6/v0.7 e non creare automaticamente un Registry v0.8.",
+      "result": "docs/README.md è l'indice umano principale."
+    },
+    {
+      "id": "DEC-DOC-002",
+      "decision": "Non creare docs/20-history come requisito della baseline corrente.",
+      "result": "La storia documentale locale viene mantenuta nelle cartelle 90-history pertinenti."
+    },
+    {
+      "id": "DEC-DOC-003",
+      "decision": "Non rendere Git l'unico archivio storico.",
+      "result": "Git resta una garanzia di recupero, ma non sostituisce gli snapshot storici locali conservati nel repository."
+    },
+    {
+      "id": "DEC-DOC-004",
+      "decision": "Non creare History Index e Project Timeline come prerequisiti obbligatori del refactor concluso.",
+      "result": "README, manifesti, FILE_MAP e cartelle 90-history forniscono la navigazione e la tracciabilità necessarie."
+    },
+    {
+      "id": "DEC-DOC-005",
+      "decision": "Mantenere Project_Integrity_OS_Prompt_Report_Rule_Catalog_Lifecycle_v0_1.md come baseline operativa MVP.",
+      "result": "La v0.1 è ACTIVE, con task di origine TODO-0003; non viene creata una v0.2 solo per soddisfare il vecchio piano."
+    },
+    {
+      "id": "DEC-DOC-006",
+      "decision": "Non riscrivere retroattivamente gli snapshot storici per correggere link o metadati editoriali.",
+      "result": "I link storici non risolti sono ammessi e documentati; i link correnti devono restare a zero."
+    },
+    {
+      "id": "DEC-DOC-007",
+      "decision": "Conservare artefatti autentici e script di esecuzione/verifica nelle cartelle delle task.",
+      "result": "File .sh, .py, JSON, CSV, manifesti, report e file di verifica sono parte della tracciabilità."
+    },
+    {
+      "id": "DEC-DOC-008",
+      "decision": "Separare la correzione documentale dalla modifica delle decisioni tecniche del data model.",
+      "result": "Le decisioni PRIVATE_CHILD e CLOSURE_REPORT non vengono applicate di nascosto durante il refactor documentale."
+    }
+  ],
+  "legacy_findings_disposition": [
+    {
+      "id": "FND-001",
+      "old_title": "Artefatti non Markdown eliminati dal tree docs",
+      "new_status": "RESOLVED_OR_OBSOLETE",
+      "decision": "Il tree finale contiene nuovamente artefatti non Markdown e l'audit corrente riguarda il tree docs complessivo. Resta soltanto un eventuale controllo opzionale contro il commit base."
+    },
+    {
+      "id": "FND-002",
+      "old_title": "Document Registry v0.7 non affidabile",
+      "new_status": "RESOLVED",
+      "decision": "Registry v0.6/v0.7 eliminati; non viene creato Registry v0.8."
+    },
+    {
+      "id": "FND-003",
+      "old_title": "Struttura reale delle task diversa dalla baseline organizzativa",
+      "new_status": "RESOLVED_BY_DIFFERENT_MODEL",
+      "decision": "TODO-0002 e TODO-0003 hanno README e struttura organizzata. La soluzione finale non usa History Index/Project Timeline obbligatori."
+    },
+    {
+      "id": "FND-004",
+      "old_title": "Metadati interni incoerenti con filename e ruolo",
+      "new_status": "CLOSED_AS_NON_BLOCKING_HISTORY",
+      "decision": "Gli artefatti autentici e storici non vengono riscritti solo per uniformare metadati interni. La coerenza è richiesta ai documenti correnti."
+    },
+    {
+      "id": "FND-005",
+      "old_title": "Audit Documentale v0.1 invalidato dai finding successivi",
+      "new_status": "RESOLVED",
+      "decision": "Audit v0.1 e v0.2 sono storici; Audit v0.3 è il FINAL corrente."
+    },
+    {
+      "id": "FND-006",
+      "old_title": "Decisioni di governance risolte, applicazione ancora necessaria",
+      "new_status": "SPLIT",
+      "decision": "Q-001-D e Q-002-C sono superseded dalle decisioni documentali adottate. Q-003-C e Q-004-C restano temi architetturali da valutare nel lavoro TODO-0101, fuori dal refactor documentale."
+    }
+  ],
+  "legacy_actions_disposition": [
+    {
+      "id": "ACT-001",
+      "status": "KEEP_AS_GUARD",
+      "decision": "Conservare solo la regola: nessuna operazione Git senza autorizzazione esplicita."
+    },
+    {
+      "id": "ACT-002",
+      "status": "OPTIONAL_SAFETY_CHECK",
+      "decision": "Backup e quarantena possono essere verificati, ma non bloccano più il piano documentale."
+    },
+    {
+      "id": "ACT-003",
+      "status": "REMOVE_FROM_ACTIVE_PLAN",
+      "decision": "La reintegrazione specifica nel vecchio percorso e la registrazione DOC-027 in Registry non sono più applicabili."
+    },
+    {
+      "id": "ACT-004",
+      "status": "OPTIONAL_VERIFY",
+      "decision": "Mantenere solo come controllo facoltativo di completezza dei file non Markdown rispetto al commit base."
+    },
+    {
+      "id": "ACT-005",
+      "status": "SUPERSEDED",
+      "decision": "Registry v0.7 già rimosso; nessuna nuova storia in docs/20-history."
+    },
+    {
+      "id": "ACT-006",
+      "status": "SUPERSEDED",
+      "decision": "Non creare Registry v0.8."
+    },
+    {
+      "id": "ACT-007",
+      "status": "SUPERSEDED",
+      "decision": "Nessuna validazione del Registry v0.8 perché il Registry non è più parte del modello corrente."
+    },
+    {
+      "id": "ACT-008",
+      "status": "SUPERSEDED",
+      "decision": "Nessuna ricostruzione finale del Registry."
+    },
+    {
+      "id": "ACT-009",
+      "status": "REMOVE_FROM_ACTIVE_PLAN",
+      "decision": "La funzione di tracciamento è svolta da Audit v0.3, README, report TODO, FILE_MAP e manifest."
+    },
+    {
+      "id": "ACT-010",
+      "status": "SUPERSEDED_BY_FINAL_STRUCTURE",
+      "decision": "Non creare Organizzazione Documenti v0.3, History Index o Project Timeline come prerequisiti."
+    },
+    {
+      "id": "ACT-011",
+      "status": "COMPLETED_AS_IMPLEMENTED",
+      "decision": "README TODO-0002, README TODO-0003 e docs/README.md esistono; eliminare i requisiti History Index/Timeline."
+    },
+    {
+      "id": "ACT-012",
+      "status": "SUPERSEDED",
+      "decision": "Non rimuovere lo storico TODO-0101 dal tree per affidarlo solo a Git; usare 90-history."
+    },
+    {
+      "id": "ACT-013",
+      "status": "REMOVE_FROM_ACTIVE_PLAN",
+      "decision": "Non riscrivere artefatti storici autentici per uniformare metadati."
+    },
+    {
+      "id": "ACT-014",
+      "status": "REMOVE_FROM_ACTIVE_PLAN",
+      "decision": "Non riscrivere artefatti storici autentici per uniformare metadati."
+    },
+    {
+      "id": "ACT-015",
+      "status": "REMOVE_FROM_ACTIVE_PLAN",
+      "decision": "Non riscrivere artefatti storici autentici per uniformare metadati."
+    },
+    {
+      "id": "ACT-016",
+      "status": "REMOVE_FROM_ACTIVE_PLAN",
+      "decision": "Non riscrivere artefatti storici autentici per uniformare metadati."
+    },
+    {
+      "id": "ACT-017",
+      "status": "REMOVE_FROM_ACTIVE_PLAN",
+      "decision": "Non riscrivere artefatti storici autentici per uniformare metadati."
+    },
+    {
+      "id": "ACT-018",
+      "status": "REMOVE_FROM_ACTIVE_PLAN",
+      "decision": "Non riscrivere artefatti storici autentici per uniformare metadati."
+    },
+    {
+      "id": "ACT-019",
+      "status": "REMOVE_FROM_ACTIVE_PLAN",
+      "decision": "Non riscrivere artefatti storici autentici per uniformare metadati."
+    },
+    {
+      "id": "ACT-020",
+      "status": "REMOVE_FROM_ACTIVE_PLAN",
+      "decision": "Non riscrivere artefatti storici autentici per uniformare metadati."
+    },
+    {
+      "id": "ACT-021",
+      "status": "SUPERSEDED",
+      "decision": "Non correggere retroattivamente link nei documenti storici; i link storici non risolti sono documentati."
+    },
+    {
+      "id": "ACT-022",
+      "status": "SUPERSEDED",
+      "decision": "Non eliminare rappresentazioni storiche solo perché recuperabili da Git; la conservazione locale è ammessa."
+    },
+    {
+      "id": "ACT-023",
+      "status": "SUPERSEDED",
+      "decision": "Git non è l'unico archivio storico; 90-history resta parte della struttura canonica."
+    },
+    {
+      "id": "ACT-024",
+      "status": "SUPERSEDED",
+      "decision": "Prompt/Report Rule Catalog Lifecycle v0.1 resta ACTIVE; non creare v0.2 per inerzia del vecchio piano."
+    },
+    {
+      "id": "ACT-025",
+      "status": "MOVE_TO_ARCHITECTURE_BACKLOG",
+      "decision": "PRIVATE_CHILD è questione tecnica/architetturale da verificare contro DEC-0101, non correzione documentale."
+    },
+    {
+      "id": "ACT-026",
+      "status": "MOVE_TO_ARCHITECTURE_BACKLOG",
+      "decision": "CLOSURE_REPORT allowlist è questione tecnica/architetturale da verificare contro DEC-0101, non correzione documentale."
+    },
+    {
+      "id": "ACT-027",
+      "status": "COMPLETED_SUPERSEDED_BY_V0_3",
+      "decision": "Audit v0.3 FINAL esiste; non creare/promuovere Audit v0.2 come finale."
+    },
+    {
+      "id": "ACT-028",
+      "status": "COMPLETED_WITH_NEW_CRITERIA",
+      "decision": "Il tree finale è stato verificato: 147 file, 0 link correnti rotti, manifesti coerenti."
+    },
+    {
+      "id": "ACT-029",
+      "status": "ACTIVE_FINAL_GATE",
+      "decision": "Mantenere come unico gate Git finale, semplificato sui criteri realmente adottati."
+    }
+  ],
+  "active_scope": {
+    "guard": {
+      "id": "GUARD-GIT-001",
+      "status": "ACTIVE",
+      "checklist": [
+        "[x] Non eseguire commit, push, PR, merge o force-push senza autorizzazione esplicita dell'utente."
+      ]
+    },
+    "optional_verification": {
+      "id": "VERIFY-BASE-001",
+      "status": "OPTIONAL",
+      "origin": "ACT-004",
+      "purpose": "Confrontare, se ritenuto utile, i file non Markdown del commit base con il tree corrente per produrre una verifica supplementare di completezza. Non è un blocker del refactor già concluso.",
+      "checklist": [
+        "[ ] Inventariare i file non Markdown del commit base.",
+        "[ ] Classificarli come presenti-identici, mancanti o differenti.",
+        "[ ] Non sovrascrivere automaticamente file differenti.",
+        "[ ] Produrre un report separato solo se il controllo viene eseguito."
+      ]
+    },
+    "architecture_backlog": [
+      {
+        "id": "ARCH-FOLLOWUP-001",
+        "source": "ACT-025 / Q-003-C",
+        "title": "Verificare PRIVATE_CHILD contro le decisioni DEC-0101 correnti",
+        "status": "OPEN_ARCHITECTURE_REVIEW",
+        "checklist": [
+          "[ ] Verificare se PRIVATE_CHILD è già coperto dalle 20 DEC-0101.",
+          "[ ] Se non è coperto, aprire una decisione architetturale separata.",
+          "[ ] Non modificare i documenti tecnici come semplice pulizia documentale."
+        ]
+      },
+      {
+        "id": "ARCH-FOLLOWUP-002",
+        "source": "ACT-026 / Q-004-C",
+        "title": "Verificare l'allowlist CLOSURE_REPORT contro le decisioni DEC-0101 correnti",
+        "status": "OPEN_ARCHITECTURE_REVIEW",
+        "checklist": [
+          "[ ] Verificare se l'allowlist è già coperta dalle 20 DEC-0101.",
+          "[ ] Se non è coperta, aprire una decisione architetturale separata.",
+          "[ ] Non introdurre owner type o vincoli tecnici durante la sola correzione documentale."
+        ]
+      }
+    ],
+    "final_git_gate": {
+      "id": "GATE-DOC-001",
+      "source": "ACT-029",
+      "status": "READY_FOR_USER_AUTHORIZATION_CHECK",
+      "required_conditions": [
+        "[x] docs/ contiene 41 cartelle e 147 file.",
+        "[x] Audit documentale corrente: v0.3 FINAL.",
+        "[x] Checkpoint TODO-0101 corrente: v0.12.",
+        "[x] Decision Log corrente: v0.9.",
+        "[x] FILE_MAP.csv rigenerato e verificato.",
+        "[x] manifest.json schema 2.1.",
+        "[x] MANIFEST_SHA256.txt verificato.",
+        "[x] Link correnti non risolti: 0.",
+        "[x] Link storici non risolti documentati e non riscritti retroattivamente.",
+        "[x] Nessuna modifica tecnica involontaria alle 20 decisioni DEC-0101.",
+        "[x] Piano modifiche documentazione v0.4: COMPLETED.",
+        "[ ] Autorizzazione esplicita dell'utente a eseguire una nuova operazione Git."
+      ],
+      "decision": "Il gate documentale è tecnicamente soddisfatto; resta intenzionalmente aperta solo l'autorizzazione esplicita dell'utente per qualsiasi commit/push/PR/merge."
+    }
+  },
+  "explicitly_not_to_create": [
+    "Project_Integrity_OS_Document_Registry_v0_8.md",
+    "docs/20-history/ come requisito della baseline corrente",
+    "Project_Integrity_OS_History_Index_v0_1.md come prerequisito del refactor concluso",
+    "Project_Integrity_OS_Project_Timeline_v0_1.md come prerequisito del refactor concluso",
+    "Project_Integrity_OS_Prompt_Report_Rule_Catalog_Lifecycle_v0_2.md solo per soddisfare la v0.5"
+  ],
+  "closure": {
+    "legacy_plan_v0_5_status": "SUPERSEDED",
+    "documentation_refactor_status": "COMPLETED",
+    "remaining_documentation_blockers": 0,
+    "remaining_architecture_followups": 2,
+    "remaining_git_gate": "USER_AUTHORIZATION_ONLY",
+    "next_step": "Non eseguire altre correzioni documentali strutturali. Valutare separatamente ARCH-FOLLOWUP-001 e ARCH-FOLLOWUP-002 durante il lavoro architetturale TODO-0101. Qualsiasi operazione Git richiede autorizzazione esplicita."
+  }
+}
